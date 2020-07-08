@@ -56,17 +56,18 @@ function ProductHeroLayout(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="/static/themes/onepirate/productHeroWonder.png"
+          src="http://studyinc.org/wp-content/uploads/2018/11/StudyInc-Logo-200.png"
           alt="wonder"
-          width="147"
-          height="80"
+          width="128"
+          height="30"          
         />
+        <hr></hr>
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
         <img
           className={classes.arrowDown}
-          src="/static/themes/onepirate/productHeroArrowDown.png"
+          src="https://img.icons8.com/offices/30/000000/expand-arrow.png"
           height="16"
           width="12"
           alt="arrow down"

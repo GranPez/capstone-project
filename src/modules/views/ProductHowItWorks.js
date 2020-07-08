@@ -57,11 +57,7 @@ function ProductHowItWorks(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="/static/themes/onepirate/productCurvyLines.png"
-          className={classes.curvyLines}
-          alt="curvy lines"
-        />
+        
         <Typography variant="h4" marked="center" className={classes.title} component="h2">
           How it works
         </Typography>
@@ -71,7 +67,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
                 <img
-                  src="/static/themes/onepirate/productHowItWorks1.svg"
+                  src="https://img.icons8.com/cotton/64/000000/suitcase--v2.png"
                   alt="suitcase"
                   className={classes.image}
                 />
@@ -83,8 +79,8 @@ function ProductHowItWorks(props) {
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
-                <img
-                  src="/static/themes/onepirate/productHowItWorks2.svg"
+                <img 
+                  src="https://img.icons8.com/cotton/64/000000/graph.png"
                   alt="graph"
                   className={classes.image}
                 />
@@ -97,7 +93,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>3.</div>
                 <img
-                  src="/static/themes/onepirate/productHowItWorks3.svg"
+                  src="https://img.icons8.com/cotton/128/000000/clock--v2.png"
                   alt="clock"
                   className={classes.image}
                 />

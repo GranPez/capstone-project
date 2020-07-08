@@ -53,7 +53,7 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/studyinc/productValues1.svg"
+                src="https://img.icons8.com/cotton/64/000000/suitcase--v2.png"
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
@@ -69,7 +69,7 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/studyinc/productValues2.svg"
+                src="https://img.icons8.com/cotton/64/000000/graph.png"
                 alt="graph"
               />
               <Typography variant="h6" className={classes.title}>
@@ -85,7 +85,7 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/studyinc/productValues3.svg"
+                src="https://img.icons8.com/cotton/128/000000/clock--v2.png"
                 alt="clock"
               />
               <Typography variant="h6" className={classes.title}>
