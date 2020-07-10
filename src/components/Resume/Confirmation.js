@@ -24,7 +24,7 @@ class Confirmation extends Component{
             <Grid.Column width={16}>
             <br/>
             <h1>Confirm Information</h1> 
-            <div>          
+            {/* <div>          
             <Button
             label="Back"
             primary={false}
@@ -37,7 +37,7 @@ class Confirmation extends Component{
             style={styles.button}
             onClick={this.continue}
             />
-            </div>
+            </div> */}
           </Grid.Column>
         </Grid>
         );
