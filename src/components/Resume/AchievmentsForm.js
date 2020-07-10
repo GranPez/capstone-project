@@ -40,7 +40,7 @@ class AchievmentsForm extends Component {
     return(
       <Form onSubmit={this.handleSubmit}>
         <br/>
-      <Header as= 'h1' valuealign='center'> Achievments</Header>
+      <Header as= 'h1' valuealign='center'>Achievements</Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
@@ -48,17 +48,17 @@ class AchievmentsForm extends Component {
                 <Form.Input fluid 
                 type = 'text'
                 id = "achievments1"
-                label = "Achievments 1"
-                placeholder = "Achievments"
-                name = "achievments1"
+                label = "Achievements 1"
+                placeholder = "Achievements"
+                name = ""
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
             />
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments2"
-                label = "Achievments 2"
-                placeholder = "Achievments"
+                label = "Achievements 2"
+                placeholder = "Achievements"
                 name = "achievments2"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
@@ -73,8 +73,8 @@ class AchievmentsForm extends Component {
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments3"
-                label = "Achievments 3"
-                placeholder = "Achievments"
+                label = "Achievements 3"
+                placeholder = "Achievements"
                 name = "achievments3"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
@@ -82,8 +82,8 @@ class AchievmentsForm extends Component {
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments4"
-                label = "Achievments 4"
-                placeholder = "Achievments"
+                label = "Achievements 4"
+                placeholder = "Achievements"
                 name = "achievments4"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
@@ -98,8 +98,8 @@ class AchievmentsForm extends Component {
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments5"
-                label = "Achievments 5"
-                placeholder = "Achievments"
+                label = "Achievements 5"
+                placeholder = "Achievements"
                 name = "achievments5"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
@@ -107,8 +107,8 @@ class AchievmentsForm extends Component {
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments6"
-                label = "Achievments 6"
-                placeholder = "Achievments"
+                label = "Achievements 6"
+                placeholder = "Achievements"
                 name = "achievments6"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
@@ -123,8 +123,8 @@ class AchievmentsForm extends Component {
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments7"
-                label = "Achievments 7"
-                placeholder = "Achievments"
+                label = "Achievements 7"
+                placeholder = "Achievements"
                 name = "achievments7"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
@@ -132,8 +132,8 @@ class AchievmentsForm extends Component {
              <Form.Input fluid 
                 type = 'text'
                 id = "achievments8"
-                label = "Achievments 8"
-                placeholder = "Achievments"
+                label = "Achievements 8"
+                placeholder = "Achievements"
                 name = "achievments8"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}

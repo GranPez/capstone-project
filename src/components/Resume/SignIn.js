@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import  {
     Grid, Header, 
-    Button, Form} from 'semantic-ui-react';
+    Button, Form, GridRow} from 'semantic-ui-react';
 
 
 export class SignIn extends Component {
@@ -17,43 +17,46 @@ export class SignIn extends Component {
         return (
             <Form >
                 <br/>
-              <Header as= 'h1' valuealign='center'> SignIn</Header>
-              <Grid container columns={1} >
-                <Grid.Column width={16}>
-                
-                <Form.Input fluid
-                label='Enter your First Name' 
-                placeholder='Name'
-                name='firstName'
-                onChange={handleChange('firstName')}
-                defaultValue={values.firstName}
-                />
-                <br/>
-                <Form.Input fluid
-                label='Enter your Last Name' 
-                placeholder='Last Name'
-                name='lastName'
-                onChange={handleChange('lastName')}
-                defaultValue={values.lastName}
-                />
-                <br/>
-                <Form.Input fluid
-                label='Enter your Email Address' 
-                placeholder='Email Address'
-                name='email'
-                onChange={handleChange('email')}
-                defaultValue={values.email}
-                />
-                <br/>
-                <Form.Input fluid
-                label='Enter your Password' 
-                placeholder='Password'
-                name='password'
-                onChange={handleChange('password')}
-                defaultValue={values.password}
-                />
-                <br/>
-                </Grid.Column >
+              <Header as= 'h1' valuealign='center'>Sign In</Header>
+              {/* <Grid container columns={1} > */}
+              <Grid columns={1} container divided='vertically' stackable>
+                <GridRow>
+                    <Grid.Column width={16}>
+                    
+                    <Form.Input fluid
+                    label='Enter your First Name' 
+                    placeholder='Name'
+                    name='firstName'
+                    onChange={handleChange('firstName')}
+                    defaultValue={values.firstName}
+                    />
+                    <br/>
+                    <Form.Input fluid
+                    label='Enter your Last Name' 
+                    placeholder='Last Name'
+                    name='lastName'
+                    onChange={handleChange('lastName')}
+                    defaultValue={values.lastName}
+                    />
+                    <br/>
+                    <Form.Input fluid
+                    label='Enter your Email Address' 
+                    placeholder='Email Address'
+                    name='email'
+                    onChange={handleChange('email')}
+                    defaultValue={values.email}
+                    />
+                    <br/>
+                    <Form.Input fluid
+                    label='Enter your Password' 
+                    placeholder='Password'
+                    name='password'
+                    onChange={handleChange('password')}
+                    defaultValue={values.password}
+                    />
+                    <br/>
+                    </Grid.Column >
+                </GridRow>
 
                 <Grid.Column>
                 <Button

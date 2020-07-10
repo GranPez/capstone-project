@@ -1,5 +1,24 @@
 import React, { Component } from "react";
-import {Button} from 'semantic-ui-react';
+import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
+
+const styles = {
+    button:{
+        margin: 15
+    },
+    h1: {
+      marginTop: '3em',
+    },
+    h2: {
+      margin: '4em 0em 2em',
+    },
+    h3: {
+      marginTop: '2em',
+      padding: '2em 0em',
+    },
+    last: {
+      marginBottom: '300px',
+    },
+  }
 
 class ProfessionalDesignationForm extends Component {
 //Pagination
@@ -25,7 +44,7 @@ continue = e => {
         this.setState ({ designation: evt.target.value});
     }
     handleSubmit(evt) {
-        alert(`You typed: ${this.state.designation}`);
+        //alert(`You typed: ${this.state.designation}`);
         this.setState({ designation : ""});
         evt.preventDefault();
     }
@@ -33,45 +52,43 @@ continue = e => {
 
     render() {
         return (
-            <div>
-                
-            <h1> Professional Designation (Optional) </h1>
+            <Form onSubmit={this.handleSubmit}>
+                <Header as= 'h2' content='stackable Grid' textAlign='center' style={styles.h3}>Professional Designation (Optional)</Header>
+                <Grid columns={2} stackable></Grid>
+                    
+                <Grid.Column width={16}>
+                    <Segment>
+                        <Form.Input fluid
+                            label="Write your professional designation (if any):"
+                            type='text'
+                            name='designation'
+                            placeholder='P.Eng., M.D., etc.' 
+                            value={this.state.designation}
+                            onChange={this.handleChange}
+                        />
+                    </Segment>
+                </Grid.Column>
 
-            <div className="form-group">
-            <form onSubmit={this.handleSubmit}>
-           
-                <label htmlFor='designation' > Write your professional designation (if any):  </label>
-                <input 
-                type="text" 
-                id="designation" 
-                className="form-control" 
-                value={this.state.designation} 
-                onChange={this.handleChange} 
-                placeholder='P.Eng., M.D., etc.' 
-                />
+                    
+                        
+                        <Button
+                        label="Back"
+                        primary={false}
+                        style={styles.button}
+                        onClick={this.back}
+                        />  
+                        <Button
+                        label="Next"
+                        primary={true}
+                        style={styles.button}
+                        onClick={this.continue}
+                        />
                 
-        <Button
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={this.back}
-        />  
-        <Button
-          label="Next"
-          primary={true}
-          style={styles.button}
-          onClick={this.continue}
-        />
-            </form>
-            </div>
-            </div>
+                
+                
+            </Form>
         )
     }
 }
 
-const styles = {
-    button:{
-        margin: 15
-    }
-  }
 export default ProfessionalDesignationForm;

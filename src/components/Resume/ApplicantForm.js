@@ -6,7 +6,7 @@ import CoreCompetenciesList from './CoreCompetenciesList';
 import WorkExperienceList from './WorkExperienceList';
 import ContactForm from './ContactForm';
 import ReferenceForm from './ReferenceForm';
-import ProfDesignationForm from './ProfDesignationForm';
+import ProfDesignationForm from './ProfessionalDesignationForm';
 import AchievmentsList from './AchievmentsList';
 import TellMeAboutYouForm from'./TellMeAboutYouForm';
 import Confirmation from'./Confirmation';
@@ -59,7 +59,7 @@ export class ApplicantForm extends Component {
         const educationListValues = {key,id, schoolName, degree, major, schoolCountry, graduationYear, gpa, gpaScale, delEducation};
         const qualificationListValues = {keyQ,idQ, qualification1, qualification2,qualification3, qualification4,delQualification};
         const competencyListValues = {keyC,idC, competency1, competency2,competency3, competency4, competency5, competency6, competency7, delCompetency};
-        const workExperienceListValues = {jobtitle, company, city, province_state, startdate, enddate, responsibilities1,  responsibilities2,  responsibilities3,  responsibilities4,  responsibilities5,  responsibilities6,  responsibilities7,  responsibilities8};
+        const workExperienceListValues = {jobtitle, company, city, province_state, startdate, enddate, responsibilities1,  responsibilities2,  responsibilities3,       responsibilities4,  responsibilities5,  responsibilities6,  responsibilities7,  responsibilities8};
         const achievmentsListValues = {achievments1, achievments2, achievments3, achievments4, achievments5, achievments6, achievments7, achievments8};
         const contactValues = {app_name, app_lastname, app_email, app_phone_num, app_address, app_country, app_city, app_state, app_zip_code};
         const referenceValues = {contact_name, contact_lastname, contact_position, contact_email, contact_phone, company_name, contact_relationship};
