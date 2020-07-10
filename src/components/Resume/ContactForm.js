@@ -1,27 +1,23 @@
-
+// Updated 2020-07-07 07:23
 import React, { Component } from 'react'
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
-
+const uuid = require ('uuid');
 
 class ContactForm extends Component{
-  //Pagination
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-    }
-  
-    back = e => {
-      e.preventDefault();
-      this.props.prevStep();
-      }
-  
     
-  //ContactForm
+//ContactForm
   constructor(props) {
     super(props);
-    this.state = {app_name:"", app_lastname:"", app_email:"", 
-    app_phone_num:"", app_address:"", app_country:"", 
-    app_city:"", app_state:"", app_zip_code:""};
+    this.state = {
+      app_name:"",
+      app_lastname:"",
+      app_email:"",
+      app_phone_num:"",
+      app_address:"",
+      app_country:"",
+      app_city:"",
+      app_state:"",
+      app_zip_code:""};
     this.handleChange=this.handleChange.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
   }
@@ -30,6 +26,17 @@ class ContactForm extends Component{
   }
   handleSubmit(evt){
       evt.preventDefault();
+      this.props.newContact({...this.state, id: uuid.v4()});
+      this.state = ({
+        app_name:"",
+        app_lastname:"",
+        app_email:"",
+        app_phone_num:"",
+        app_address:"",
+        app_country:"",
+        app_city:"",
+        app_state:"",
+        app_zip_code:""});
 
   }
   render(){
@@ -84,7 +91,7 @@ class ContactForm extends Component{
                   label='Email'
                   type='email'
                   name='app_email'
-                  placeholder='e.g., Director of Marketing'
+                  placeholder='Email'
                   value={this.state.app_email}
                   onChange={this.handleChange}
               />
@@ -162,19 +169,10 @@ class ContactForm extends Component{
             </Segment>
           </Grid.Column>
         </Grid.Row>
+              <Grid.Column width={2}>
+              <Button color='blue'>Add </Button> 
+              </Grid.Column>
     </Grid>
-    <Button
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={this.back}
-        />  
-        <Button
-          label="Next"
-          primary={true}
-          style={styles.button}
-          onClick={this.continue}
-        />
   </Form>
     );
   }
