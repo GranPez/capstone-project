@@ -5,6 +5,7 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import ForgotPassword from './ForgotPasword';
 import Index from './components/Resume/Index';
+//import Template from './Template';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <SignUp />
     <ForgotPassword />
     <Index />
+    {/* <Template /> */}
     </div>
   );
 }
