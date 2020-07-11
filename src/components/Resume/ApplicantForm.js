@@ -4,8 +4,8 @@ import EducationList from './EducationList';
 import QualificationsList from './QualificationsList';
 import CoreCompetenciesList from './CoreCompetenciesList';
 import WorkExperienceList from './WorkExperienceList';
-import ContactForm from './ContactForm';
-import ReferenceForm from './ReferenceForm';
+import ContactList from './ContactList';
+import ReferenceList from './ReferenceList';
 import ProfessionalDesignationForm from './ProfessionalDesignationForm';
 import AchievmentsList from './AchievmentsList';
 import TellMeAboutYouForm from'./TellMeAboutYouForm';
@@ -122,7 +122,7 @@ export class ApplicantForm extends Component {
                   )
             case 7:
                 return (
-                    <ContactForm
+                    <ContactList
                       nextStep={this.nextStep}
                       prevStep={this.prevStep}
                       handleChange={this.handleChange}
@@ -131,7 +131,7 @@ export class ApplicantForm extends Component {
                   )
             case 8:
                 return (
-                    <ReferenceForm
+                    <ReferenceList
                       nextStep={this.nextStep}
                       prevStep={this.prevStep}
                       handleChange={this.handleChange}

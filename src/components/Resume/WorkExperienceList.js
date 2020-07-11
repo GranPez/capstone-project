@@ -78,7 +78,7 @@ class WorkExperienceList extends Component {
         const styles = {
           button:{
               margin: 15
-          }
-        }
+  }
+}
 
 export default WorkExperienceList;
