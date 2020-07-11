@@ -12,8 +12,6 @@ class Reference extends Component {
     render(){
         return(
             <div>
-                <button>Edit</button>
-                <button>Delete </button>         
                 <li>
                   {this.props.contact_name}{``}
                   {this.props.contact_lastname}{``}

@@ -62,7 +62,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/src/SignIn.js"
+              href="../../../src/components/Resume/SignIn.js"
             >
               {'Sign In'}
             </Link>
