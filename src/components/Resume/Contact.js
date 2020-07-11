@@ -23,7 +23,7 @@ class Contact extends Component {
                   {this.props.app_state}{``}
                   {this.props.app_zip_code}
                 </li>
-                <Icon link name='trash' color='red' onClick={this.handleRemoveReference} />
+                <Icon link name='trash' color='red' onClick={this.handleRemoveContact} />
             </div>
         )
     }
