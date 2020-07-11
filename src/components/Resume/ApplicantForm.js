@@ -6,7 +6,7 @@ import CoreCompetenciesList from './CoreCompetenciesList';
 import WorkExperienceList from './WorkExperienceList';
 import ContactForm from './ContactForm';
 import ReferenceForm from './ReferenceForm';
-import ProfDesignationForm from './ProfessionalDesignationForm';
+import ProfessionalDesignationForm from './ProfessionalDesignationForm';
 import AchievmentsList from './AchievmentsList';
 import TellMeAboutYouForm from'./TellMeAboutYouForm';
 import Confirmation from'./Confirmation';
@@ -140,7 +140,7 @@ export class ApplicantForm extends Component {
                   )
             case 9:
                 return (
-                    <ProfDesignationForm
+                    <ProfessionalDesignationForm
                       nextStep={this.nextStep}
                       prevStep={this.prevStep}
                       handleChange={this.handleChange}

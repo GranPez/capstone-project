@@ -27,7 +27,7 @@ class ContactForm extends Component{
   handleSubmit(evt){
       evt.preventDefault();
       this.props.newContact({...this.state, id: uuid.v4()});
-      this.state = ({
+      this.setState = ({
         app_name:"",
         app_lastname:"",
         app_email:"",
