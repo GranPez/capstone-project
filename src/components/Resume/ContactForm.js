@@ -1,6 +1,6 @@
 // Updated 2020-07-07 07:23
 import React, { Component } from 'react'
-import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
+import  {Button, Form, Grid, Header} from 'semantic-ui-react';
 const uuid = require ('uuid');
 
 class ContactForm extends Component{
