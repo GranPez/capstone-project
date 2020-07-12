@@ -9,6 +9,7 @@ import ReferenceForm from './ReferenceForm';
 import ProfDesignationForm from './ProfessionalDesignationForm';
 import AchievmentsList from './AchievmentsList';
 import TellMeAboutYouForm from'./TellMeAboutYouForm';
+import Video from'./Video';
 import Confirmation from'./Confirmation';
 import Success from'./Success';
 
@@ -53,7 +54,7 @@ export class ApplicantForm extends Component {
             app_name, app_lastname, app_email, app_phone_num, app_address, app_country, app_city, app_state, app_zip_code,
             contact_name, contact_lastname, contact_position, contact_email, contact_phone, company_name, contact_relationship,
             designation,
-            aboutYou
+            aboutYou, Video
         }= this.state;
         const signInValues = {firstName,lastName, email, password};
         const educationListValues = {key,id, schoolName, degree, major, schoolCountry, graduationYear, gpa, gpaScale, delEducation};

@@ -173,6 +173,18 @@ class ContactForm extends Component{
               <Button color='blue'>Add </Button> 
               </Grid.Column>
     </Grid>
+    <Button
+          label="Back"
+          primary={false}
+          style={styles.button}
+          onClick={this.back}
+        />    
+        <Button
+          label="Next"
+          primary={true}
+          style={styles.button}
+          onClick={this.continue}
+        />
   </Form>
     );
   }
