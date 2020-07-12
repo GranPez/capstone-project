@@ -47,7 +47,7 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/studyinc/sign-up/"
+        href="../../src/components/Resume/SignIn.js"
       >
         Register
       </Button>

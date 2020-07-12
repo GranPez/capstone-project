@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import  {Grid, Button} from 'semantic-ui-react';
 //import {Form} from 'semantic-ui-react-form-validator';
-import ResumeHeader from "./Header"
+//import ResumeHeader from "./Header"
 import Education from './Education';
 import EducationForm from './EducationForm';
 
@@ -65,7 +65,7 @@ export class EducationList extends Component {
     <Grid container columns={1}>
       <div>
         <br />
-        <ResumeHeader />
+        {/*<ResumeHeader />*/}
         <br />
         <EducationForm newEducation={this.addEducation} />
         <ul>

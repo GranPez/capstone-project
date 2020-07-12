@@ -4,16 +4,14 @@ import {Icon} from 'semantic-ui-react';
 class Contact extends Component {
     constructor(props){
         super(props);
-        this.handleRemoveReference = this.handleRemoveReference.bind(this);
+        this.handleRemoveContact = this.handleRemoveContact.bind(this);
     }
-    handleRemoveReference() {
-        this.props.delReference(this.props.id);
+    handleRemoveContact() {
+        this.props.delContact(this.props.id);
     }
     render(){
         return(
-            <div>
-                <button>Edit</button>
-                <button>Delete </button>         
+            <div>        
                 <li>
                   {this.props.app_name}{``}
                   {this.props.app_lastname}{``}
@@ -25,7 +23,7 @@ class Contact extends Component {
                   {this.props.app_state}{``}
                   {this.props.app_zip_code}
                 </li>
-                <Icon link name='trash' color='red' onClick={this.handleRemoveReference} />
+                <Icon link name='trash' color='red' onClick={this.handleRemoveContact} />
             </div>
         )
     }

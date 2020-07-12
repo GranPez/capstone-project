@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import {Grid, Button} from 'semantic-ui-react';
 import Contact from './Contact';
 import ContactForm from './ContactForm';
-import  {Grid, Button} from 'semantic-ui-react';
+
 
 class ContactList extends Component {
 
@@ -32,7 +33,7 @@ class ContactList extends Component {
 
   removeContact(id){
     this.setState({
-      references: this.state.contacts.filter(e=> e.id !==id)
+      contacts: this.state.contacts.filter(e=> e.id !==id)
     });
   }
 
@@ -41,48 +42,49 @@ class ContactList extends Component {
       return(
       <Contact
       id={contact.id} 
-      contact_name={reference.app_name}
-      contact_lastname={reference.app_lastname}
-      contact_position={reference.app_email}
-      contact_email={reference.app_phone_num}
-      contact_phone={reference.app_address}
-      company_name={reference.app_country}
-      contact_relationship={reference.app_city}
-      company_name={reference.app_state}
-      contact_relationship={reference.app_zip_code}
-      delReference={this.removeReference}
+      app_name={contact.app_name}
+      app_lastname={contact.app_lastname}
+      app_email={contact.app_email}
+      app_phone_num={contact.app_phone_num}
+      app_address={contact.app_address}
+      app_country={contact.app_country}
+      app_city={contact.app_city}
+      app_state={contact.app_state}
+      app_zip_code={contact.app_zip_code}
+      contactInfo={[contact.contactInfo]}
+
+      delContact={this.removeContact}
       />
-      );  
+      );
     });
-      
     return(
       <Grid container columns={1}>
         <div>
-          <ContactForm newContact={this.addContact}/>
+          <ContactForm newContact={this.addContact} />
           <ul>
-            {references}
+            {contacts}
           </ul>
           <Button
-            label="Back"
-            primary={false}
-            style={styles.button}
-            onClick={this.back}
-          />  
-          <Button
-            label="Next"
-            primary={true}
-            style={styles.button}
-            onClick={this.continue}
-          /> 
-        </div>
-      </Grid>
-    ); 
-  }
-}
-const styles = {
-  button:{
-      margin: 15
-  }
-}
+                  label="Back"
+                  primary={false}
+                  style={styles.button}
+                  onClick={this.back}
+                />  
+                <Button
+                  label="Next"
+                  primary={true}
+                  style={styles.button}
+                  onClick={this.continue}
+                /> 
+              </div>
+            </Grid>
+            );
+          }  
+        }  
+        const styles = {
+          button:{
+              margin: 15
+          }
+        }
 
 export default ContactList;

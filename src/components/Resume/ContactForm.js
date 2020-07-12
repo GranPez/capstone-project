@@ -1,6 +1,6 @@
 // Updated 2020-07-07 07:23
 import React, { Component } from 'react'
-import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
+import  {Button, Form, Grid, Header} from 'semantic-ui-react';
 const uuid = require ('uuid');
 
 class ContactForm extends Component{
@@ -27,7 +27,7 @@ class ContactForm extends Component{
   handleSubmit(evt){
       evt.preventDefault();
       this.props.newContact({...this.state, id: uuid.v4()});
-      this.state = ({
+      this.setState = ({
         app_name:"",
         app_lastname:"",
         app_email:"",
@@ -42,157 +42,104 @@ class ContactForm extends Component{
   render(){
   return (
     <Form onSubmit={this.handleSubmit}>
-    <Header as= 'h2' content='stackable Grid' textAlign='center' style={styles.h3}>What's your contact information?</Header>
-    <Grid columns={2} stackable>
-          
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label="First Name"
-                  type='text'
-                  name='app_name'
-                  placeholder='First Name'
-                  value={this.state.app_name}
-                  onChange={this.handleChange}
-              />
-           </Segment>
-          </Grid.Column>
-
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label="Last Name"
-                  type='text'
-                  name='app_lastname'
-                  placeholder='Last Name'
-                  value={this.state.app_lastname} 
-                  onChange={this.handleChange}
-                />
-            </Segment>
-          </Grid.Column>
-        
-        <Grid.Row columns={2} stackable>
-          <Grid.Column>
-              <Segment>
-                <Form.Input fluid
-                    label='Contact Phone Num.'
-                    type='tel'
-                    name='contact_phone'
-                    placeholder='Phone'
-                    value={this.state.contact_phone} 
-                    onChange={this.handleChange}
-                />
-              </Segment>
-          </Grid.Column>
- 
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label='Email'
-                  type='email'
-                  name='app_email'
-                  placeholder='Email'
-                  value={this.state.app_email}
-                  onChange={this.handleChange}
-              />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row columns={1}> 
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label='Address'
-                  type='text'
-                  name='app_address'
-                  placeholder='Address'
-                  value={this.state.app_address} 
-                  onChange={this.handleChange}
-              />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row columns={2} stackable> 
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label='City'
-                  type='text'
-                  name='app_city'
-                  placeholder='City'
-                  value={this.state.app_city} 
-                  onChange={this.handleChange}
-              />
-               </Segment>
-          </Grid.Column>
+    <br/>
+    <Header as= 'h1' valuealign='center'textAlign='center'>What's your contact information?
+    </Header>
+    <Grid columns={1} container divided='vertically' stackable>
+      <Grid.Row>
+        <Grid.Column width={16}>         
    
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label='Province / State'
-                  type='text'
-                  name='app_state'
-                  placeholder='Province / State'
-                  value={this.state.app_state} 
-                  onChange={this.handleChange}
-              />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-        
-        <Grid.Row columns={2} stackable>
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label='Country'
-                  type='text'
-                  name='app_country'
-                  placeholder='Country'
-                  value={this.state.app_country} 
-                  onChange={this.handleChange}
-              />
-            </Segment>
-          </Grid.Column>
-
-          <Grid.Column>
-            <Segment>
-              <Form.Input fluid
-                  label='Zip Code'
-                  type='text'
-                  name='app_zip_code'
-                  placeholder='Zip Code'
-                  value={this.state.app_zip_code} 
-                  onChange={this.handleChange}
-              />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-              <Grid.Column width={2}>
-              <Button color='blue'>Add </Button> 
-              </Grid.Column>
-    </Grid>
-    <Button
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={this.back}
-        />    
-        <Button
-          label="Next"
-          primary={true}
-          style={styles.button}
-          onClick={this.continue}
-        />
-  </Form>
+    <Form.Input fluid 
+       label="First Name"
+       type='text'
+       id = 'app_name'
+       name='app_name'
+       placeholder='First Name'
+       value={this.state.contactInfo}
+       onChange={this.handleChange}
+    />
+    <Form.Input fluid
+        label="Last Name"
+        type='text'
+        id='app_lastname'
+        name='app_lastname'
+        placeholder='Last Name'
+        value={this.state.contactInfo} 
+        onChange={this.handleChange}
+    />
+    <Form.Input fluid 
+        label='Contact Phone Num.'
+        type='tel'
+        id='contact_phone'
+        name='contact_phone'
+        placeholder='Phone'
+        value={this.state.contactInfo} 
+        onChange={this.handleChange} 
+    />
+    <Form.Input fluid
+        label='Email'
+        type='email'
+        id='app_email'
+        name='app_email'
+        placeholder='Email'
+        value={this.state.contactInfo}
+        onChange={this.handleChange}
+    />
+ 
+    <Form.Input fluid
+        label='Address'
+        type='text'
+        id='app_address'
+        name='app_address'
+        placeholder='Address'
+        value={this.state.contactInfo} 
+        onChange={this.handleChange}
+    />
+    <Form.Input fluid 
+      label='City'
+      type='text'
+      id='app_city'
+      name='app_city'
+      placeholder='City'
+      value={this.state.contactInfo} 
+      onChange={this.handleChange}
+    />
+      <Form.Input fluid 
+       label='Province / State'
+       type='text'
+       id='app_state'
+       name='app_state'
+       placeholder='Province / State'
+       value={this.state.contactInfo} 
+       onChange={this.handleChange}
+    />
+     <Form.Input fluid 
+        label='Country'
+        type='text'
+        id='app_country'
+        name='app_country'
+        placeholder='Country'
+        value={this.state.contactInfo} 
+        onChange={this.handleChange}
+    />
+    <Form.Input fluid 
+        label='Zip Code'
+        type='text'
+        id='app_zip_code'
+        name='app_zip_code'
+        placeholder='Zip Code'
+        value={this.state.contactInfo} 
+        onChange={this.handleChange}
+    />
+    </Grid.Column>
+      </Grid.Row>
+       
+       <Grid.Column width={2}>
+          <Button color='blue'>Add </Button> 
+       </Grid.Column>
+       </Grid>
+    </Form>
     );
-  }
-  
-}
-const styles = {
-  button:{
-      margin: 15
-  }
-}
+  }  
+} 
 export default ContactForm;
