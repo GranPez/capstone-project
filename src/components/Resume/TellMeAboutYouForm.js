@@ -34,7 +34,7 @@ continue = e => {
     render() {
         return (
             <div>
-            <h1 textAlign='center'> Tell us about yourself </h1>
+            <h1 text-align='center'> Tell us about yourself </h1>
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor='aboutYou' > Write a few words describing yourself:  </label>
                 <input type="text" id="aboutYou"  value={this.state.aboutYou} onChange={this.handleChange} placeholder='Describe yourself in this space' />
