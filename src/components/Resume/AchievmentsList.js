@@ -56,8 +56,6 @@ export class AchievmentsList extends Component {
     return(
     <Grid container columns={1}>
       <div>
-        <h1></h1>
-        <h1></h1>
         <AchievmentsForm newAchievment={this.addAchievment} />
         <ul>
           {achievments}
