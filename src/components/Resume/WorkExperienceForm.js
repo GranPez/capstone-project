@@ -27,7 +27,7 @@ handleChange(evt) {
         return (
         <Form onSubmit={this.handleSubmit}>
             <br/>
-            <Header as= 'h1' valuealign='center'> Work Experience</Header>
+            <Header as= 'h1' textAlign='center'> Work Experience</Header>
                 <Grid container columns={1} >
                     <Grid.Column width={16}>
                         <Form.Group widths='equal'>
