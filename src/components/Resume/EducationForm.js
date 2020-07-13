@@ -66,7 +66,7 @@ class EducationForm extends Component {
 
     return(
     <Form onSubmit={this.handleSubmit}>
-      <Header as= 'h1' valuealign='center'> Education</Header>
+      <Header as= 'h1' textAlign='center'> Education</Header>
         <Grid container columns={3} >
         <Grid.Column width={16}>
           <Form.Group widths='equal'>
