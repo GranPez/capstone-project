@@ -7,16 +7,16 @@ class Qualification extends Component {
         this.handleRemoveQualification = this.handleRemoveQualification.bind(this);
     }
     handleRemoveQualification() {
-        this.props.delQualification(this.props.id);
+        this.props.delQualification(this.props.idQ);
     }
     render(){
         return(
             <div>               
                 <li>
-                  {this.props.qualification1}{`. `}
-                  {this.props.qualification2}{`. `}
+                  {this.props.qualification}{`. `}
+                  {/* {this.props.qualification2}{`. `}
                   {this.props.qualification3}{`. `}
-                  {this.props.qualification4}{`. `}
+                  {this.props.qualification4}{`. `}*/}
                 </li>
                 <Icon link name='trash' color='red' onClick={this.handleRemoveQualification} />
             </div>

@@ -9,10 +9,10 @@ export class QualificationsForm extends Component {
   constructor(props){
     super(props);
     this.state =  {
-        qualification1:"", 
-        qualification2:"", 
+        qualification:""}; 
+        /*qualification2:"", 
         qualification3:"",
-        qualification4:""};
+        qualification4:""};*/
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -25,9 +25,13 @@ export class QualificationsForm extends Component {
   
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.newQualification({...this.state, idQ:uuid.v4()});
+    this.props.newQualification({...this.state, id:uuid.v4()});
     this.setState({
-        qualification1:"", qualification2:"", qualification3:"",qualification4:""});
+        qualification:"",
+        /*qualification2:"", 
+        qualification3:"",
+        qualification4:""*/
+      });
     }
 
   render(){
@@ -35,30 +39,35 @@ export class QualificationsForm extends Component {
     return(
     <Form onSubmit={this.handleSubmit}>
       <Header as= 'h1' textAlign='center'> Qualifications</Header>
+      <Header as= 'h3' textAlign='justify'> Please list your qualifications one by one. </Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
               <Segment>
                 <Form.Input fluid 
-                label='Qualification 1' 
+                label='Qualification ' 
                 placeholder='Qualification' 
-                name='qualification1'
-                value={this.state.qualification1}
+                name='qualification'
+                id='qualification'
+                value={this.state.qualification}
                 onChange={this.handleChange}
                 />
+                <Grid.Column width={2}>
+                <Button color='blue'>Add </Button> 
+                </Grid.Column>
             
-                <Form.Input fluid
+  {/*               <Form.Input fluid
                 label='Qualification 2' 
                 placeholder='Qualification' 
                 name='qualification2'
                 value={this.state.qualification2}
                 onChange={this.handleChange}
-                />
+                />*/}
               </Segment>
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row> 
+{/*           <Grid.Row> 
             <Grid.Column width={16}>
               <Segment>
                 <Form.Input fluid
@@ -77,12 +86,10 @@ export class QualificationsForm extends Component {
                 />
               </Segment>
             </Grid.Column>
-          </Grid.Row>
+          </Grid.Row>*/}
 
 
-       <Grid.Column width={2}>
-          <Button color='blue'>Add </Button> 
-       </Grid.Column>
+
    
       </Grid>
     </Form>
