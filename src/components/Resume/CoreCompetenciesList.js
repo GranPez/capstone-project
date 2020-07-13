@@ -54,6 +54,9 @@ class CoreCompetenciesList extends Component {
       competency5={competency.competency5}
       competency6={competency.competency6}
       competency7={competency.competency7}
+      
+      competencies={[competency.competencies]}
+
       delCompetency={this.removeCompetency}  
       />
      );

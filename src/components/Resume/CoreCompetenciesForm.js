@@ -47,7 +47,7 @@ export class CoreCompetenciesForm extends Component {
                 label='Competency 1' 
                 placeholder='Competency' 
                 name='competency1'
-                value={this.state.competency1}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
             
@@ -55,7 +55,7 @@ export class CoreCompetenciesForm extends Component {
                 label='Competency 2' 
                 placeholder='Competency' 
                 name='competency2'
-                value={this.state.competency2}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
               </Segment>
@@ -69,14 +69,14 @@ export class CoreCompetenciesForm extends Component {
                 label='Competency 3' 
                 placeholder='Competency' 
                 name='competency3'
-                value={this.state.competency3}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
                 <Form.Input fluid
                 label='Competency 4' 
                 placeholder='Competency' 
                 name='competency4'
-                value={this.state.competency4}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
               </Segment>
@@ -90,7 +90,7 @@ export class CoreCompetenciesForm extends Component {
                 label='Competency 5' 
                 placeholder='Competency' 
                 name='competency5'
-                value={this.state.competency5}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
             
@@ -98,7 +98,7 @@ export class CoreCompetenciesForm extends Component {
                 label='Competency 6' 
                 placeholder='Competency' 
                 name='competency6'
-                value={this.state.competency6}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
               </Segment>
@@ -112,7 +112,7 @@ export class CoreCompetenciesForm extends Component {
                 label='Competency 7' 
                 placeholder='Competency' 
                 name='competency7'
-                value={this.state.competency7}
+                value={this.state.competencies}
                 onChange={this.handleChange}
                 />
               </Segment>

@@ -47,10 +47,10 @@ class QualificationsList extends Component {
       <Qualification
       keyQ={qualification.id} 
       idQ={qualification.id} 
-      qualification1={qualification.qualification1}
-      qualification2={qualification.qualification2}
+      qualification={qualification.qualification}
+      /*qualification2={qualification.qualification2}
       qualification3={qualification.qualification3}
-      qualification4={qualification.qualification4}
+      qualification4={qualification.qualification4}*/
       delQualification={this.removeQualification}  
       />
      );
@@ -60,10 +60,12 @@ class QualificationsList extends Component {
   
     <Grid container columns={1}>
       <div>
-        
+        <h1></h1>
+        <h1></h1>
         <br />
         <QualificationsForm newQualification={this.addQualification} />
         <ul>
+          <br/>
           {qualifications}
         </ul>
         <Button
