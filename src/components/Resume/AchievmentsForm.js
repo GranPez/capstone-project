@@ -40,7 +40,7 @@ class AchievmentsForm extends Component {
     return(
       <Form onSubmit={this.handleSubmit}>
         <br/>
-      <Header as= 'h1' valuealign='center'>Achievements</Header>
+      <Header as= 'h1' textAlign='center'>Achievements</Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
