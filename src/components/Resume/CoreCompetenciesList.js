@@ -68,6 +68,7 @@ class CoreCompetenciesList extends Component {
       <div>
         <h1></h1>
         <h1></h1>
+        <h1></h1>
         <CoreCompetenciesForm newCompetency={this.addCompetency} />
         <ul>
           {competencies}
