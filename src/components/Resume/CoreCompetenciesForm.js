@@ -38,7 +38,7 @@ export class CoreCompetenciesForm extends Component {
 
     return(
     <Form onSubmit={this.handleSubmit}>
-      <Header as= 'h1' valuealign='center'> Core Competencies</Header>
+      <Header as= 'h1' textAlign='center'> Core Competencies</Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
