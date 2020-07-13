@@ -66,8 +66,7 @@ export class EducationList extends Component {
       <div>
         <br />
         {/*<ResumeHeader />*/}
-        <h1></h1>
-        <h1></h1>
+
         <EducationForm newEducation={this.addEducation} />
         <ul>
           {educations}
