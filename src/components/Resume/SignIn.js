@@ -17,7 +17,7 @@ export class SignIn extends Component {
         return (
             <Form >
                 <br/>
-              <Header as= 'h1' valuealign='center'>Sign In</Header>
+              <Header as= 'h1' textAlign='center'>Sign In</Header>
               {/* <Grid container columns={1} > */}
               <Grid columns={1} container divided='vertically' stackable>
                 <GridRow>
