@@ -18,6 +18,9 @@ const styles = (theme) => ({
   },
   left: {
     flex: 1,
+    fontSize: 12,
+    color: theme.palette.common.white,
+    marginLeft: theme.spacing(1),
   },
   leftLinkActive: {
     color: theme.palette.common.white,
@@ -44,7 +47,8 @@ function AppAppBar(props) {
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-
+        <img src="http://studyinc.org/wp-content/uploads/2018/11/StudyInc-Logo-200.png" alt="logo" className={classes.logo} />
+          
           <div className={classes.left} />        
           <Link
             variant="h6"
