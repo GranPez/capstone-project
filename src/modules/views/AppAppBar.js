@@ -17,7 +17,6 @@ const styles = (theme) => ({
     justifyContent: 'space-between',
   },
   left: {
-    flex: 1,
     fontSize: 12,
     color: theme.palette.common.white,
     marginLeft: theme.spacing(1),
