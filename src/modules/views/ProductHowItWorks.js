@@ -72,7 +72,7 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                  Subscribe and build a resume with 50+ eye-catching templates.
                 </Typography>
               </div>
             </Grid>
@@ -85,7 +85,7 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so be quick.
+                  Create a resume from scratch with easy editing and intuitive tools.
                 </Typography>
               </div>
             </Grid>
@@ -98,8 +98,8 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'Download your formatted resume, then print and send. '}
+                  {'Take your job search to the next level.'}
                 </Typography>
               </div>
             </Grid>
