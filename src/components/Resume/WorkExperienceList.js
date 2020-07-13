@@ -54,6 +54,8 @@ class WorkExperienceList extends Component {
            return(
               <Grid container columns={1}>
               <div>
+              <h1></h1>
+              <h1></h1>
                 <WorkExperienceForm newWorkExp={this.addWorkExperience} />
                 <ul>
                   {jobs}

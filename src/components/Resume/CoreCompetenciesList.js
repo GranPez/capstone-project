@@ -66,8 +66,8 @@ class CoreCompetenciesList extends Component {
   
     <Grid container columns={1}>
       <div>
-        
-        <br />
+        <h1></h1>
+        <h1></h1>
         <CoreCompetenciesForm newCompetency={this.addCompetency} />
         <ul>
           {competencies}
