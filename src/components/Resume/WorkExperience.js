@@ -13,12 +13,12 @@ class WorkExperience extends Component {
         return (
             <div>
                 <li>
-                    {this.props.jobtitle}
-                    {this.props.company}
-                    {this.props.city}
-                    {this.props.province_state}
-                    {this.props.startdate}
-                    {this.props.enddate}
+                    {this.props.jobtitle}{`, `}
+                    {this.props.company}{`, `}
+                    {this.props.city}{`, `}
+                    {this.props.province_state}{`, `}
+                    {this.props.startdate}{`, `}
+                    {this.props.enddate}{`, `}
                     {this.props.responsibilities}{`, `}
                 </li>   
                 <Icon link name='trash' color='red' onClick={this.handleRemoveWorkExp} />         
