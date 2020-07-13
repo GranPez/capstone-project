@@ -36,10 +36,10 @@ function ProductHero(props) {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Our Resume Builder is your piece of mind
+        Creating a resume is the next step in your new career journey 
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Please register and invest few minutes to answer our survey. This will help businesses and human resource managers on our platform find your resume.
+        Please register. This will help businesses and human resource managers on our platform find your resume.
       </Typography>
       <Button
         color="secondary"

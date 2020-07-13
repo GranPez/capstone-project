@@ -50,19 +50,109 @@ function AppAppBar(props) {
             variant="h6"
             underline="none"
             color="inherit"
-            className={classes.title}
-            href="/src/"
+            className={classes.left}
+            href="/src/components/Resume/QualificationsList.js"
           >
-            {'StudyInc'}
+            {'Qualifications'}
           </Link>
 
-          <div className={classes.right}>
+          <div className={classes.left} />        
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/ContactList.js"
+          >
+            {'Contact'}
+          </Link>
+
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/CoreCompetenciesList.js"
+          >
+            {'Core Competencies'}
+          </Link>
+
+          <div className={classes.left} />        
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/AchievmentsList.js"
+          >
+            {'Achievments'}
+          </Link>
+
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/WorkExperienceList.js"
+          >
+            {'Work Experience'}
+          </Link>
+
+          <div className={classes.left} />
+          <Link
+            color="inherit"
+            variant="h6"
+            underline="none"
+            className={classes.left}
+            href="/src/components/Resume/EducationList.js"
+          >
+            {'Education'}
+          </Link>
+
+          <div className={classes.left} />
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/ReferenceList.js"
+          >
+           {'Reference'}
+          </Link>
+
+          <div className={classes.left} />        
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/ProfessionalDesignationForm.js"
+          >
+            {'Professional Designation'}
+          </Link>
+
+          <div className={classes.left} />        
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/TellMeAboutYouForm.js"
+          >
+            {'About'}
+          </Link>
+
+          
+
+         
+
+          <div className={classes.right} />
             <Link
               color="inherit"
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="../../../src/components/Resume/SignIn.js"
+              href="/"
             >
               {'Sign In'}
             </Link>
@@ -71,11 +161,11 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/src/SignUp.js"
+              href="/"
             >
               {'Sign Up'}
             </Link>
-          </div>
+          {/* </div> */}
         </Toolbar>
       </AppBar>
       <div className={classes.placeholder} />
