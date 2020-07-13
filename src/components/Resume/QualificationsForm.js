@@ -34,7 +34,7 @@ export class QualificationsForm extends Component {
 
     return(
     <Form onSubmit={this.handleSubmit}>
-      <Header as= 'h1' valuealign='center'> Qualifications</Header>
+      <Header as= 'h1' textAlign='center'> Qualifications</Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
