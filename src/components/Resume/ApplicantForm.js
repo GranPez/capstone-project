@@ -54,7 +54,7 @@ export class ApplicantForm extends Component {
             app_name, app_lastname, app_email, app_phone_num, app_address, app_country, app_city, app_state, app_zip_code,
             contact_name, contact_lastname, contact_position, contact_email, contact_phone, company_name, contact_relationship,
             designation,
-            aboutYou, Video
+            aboutYou, video
         }= this.state;
         const signInValues = {firstName,lastName, email, password};
         const educationListValues = {key,id, schoolName, degree, major, schoolCountry, graduationYear, gpa, gpaScale, delEducation};
@@ -66,6 +66,7 @@ export class ApplicantForm extends Component {
         const referenceValues = {contact_name, contact_lastname, contact_position, contact_email, contact_phone, company_name, contact_relationship};
         const profDesignationValues = {designation};
         const aboutYouValues = {aboutYou};
+        const videoValues = {video};
 
         switch(step){
             case 1:
@@ -158,6 +159,15 @@ export class ApplicantForm extends Component {
                     />
                   )
             case 11:
+                return (
+                    <Video
+                      nextStep={this.nextStep}
+                      prevStep={this.prevStep}
+                      handleChange={this.handleChange}
+                      values={videoValues}
+                    />
+                  )
+            case 12:
                 return(
                   <Confirmation
                     nextStep={this.nextStep}
@@ -165,7 +175,7 @@ export class ApplicantForm extends Component {
                     //values={}
                   />
                 )
-            case 12:
+            case 13:
                 return <Success/>
 
             default:
