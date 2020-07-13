@@ -39,7 +39,7 @@ export class QualificationsForm extends Component {
     return(
     <Form onSubmit={this.handleSubmit}>
       <Header as= 'h1' textAlign='center'> Qualifications</Header>
-      <Header as= 'h3' textAlign='justify'> Please list your qualifications one by one. When ready, please click 'next' button</Header>
+      <Header as= 'h3' textAlign='justify'> Please list your qualifications one by one. </Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
