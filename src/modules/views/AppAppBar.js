@@ -5,6 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 //import StudyIncLogo200 from '/src/StudyIncLogo200';
 
 
@@ -14,9 +16,10 @@ const styles = (theme) => ({
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   left: {
+    display: 'flex',
     fontSize: 12,
     color: theme.palette.common.white,
     marginLeft: theme.spacing(1),
@@ -46,6 +49,9 @@ function AppAppBar(props) {
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
         <img src="http://studyinc.org/wp-content/uploads/2018/11/StudyInc-Logo-200.png" alt="logo" className={classes.logo} />
           
           <div className={classes.left} />        
@@ -57,17 +63,6 @@ function AppAppBar(props) {
             href="/src/components/Resume/QualificationsList.js"
           >
             {'Qualifications'}
-          </Link>
-
-          <div className={classes.left} />        
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.left}
-            href="/src/components/Resume/ContactList.js"
-          >
-            {'Contact'}
           </Link>
 
           <Link
@@ -129,6 +124,17 @@ function AppAppBar(props) {
             underline="none"
             color="inherit"
             className={classes.left}
+            href="/src/components/Resume/ContactList.js"
+          >
+            {'Contact'}
+          </Link>
+
+          <div className={classes.left} />        
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
             href="/src/components/Resume/ProfessionalDesignationForm.js"
           >
             {'Professional Designation'}
@@ -142,7 +148,7 @@ function AppAppBar(props) {
             className={classes.left}
             href="/src/components/Resume/TellMeAboutYouForm.js"
           >
-            {'About'}
+            {'About Me'}
           </Link>
 
           

@@ -47,12 +47,12 @@ function App() {
       <Switch>
         <Route exact path="/" component={Landing}/>
         <Route exact path="/src/components/Resume/QualificationsList.js" component={QualificationsList}/>
-        <Route exact path="/src/components/Resume/ContactList.js" component={ContactList}/>
         <Route exact path="/src/components/Resume/CoreCompetenciesList.js" component={CoreCompetenciesList}/>
         <Route exact path="/src/components/Resume/AchievmentsList.js" component={AchievmentsList}/>
         <Route exact path="/src/components/Resume/WorkExperienceList.js" component={WorkExperienceList}/>
         <Route exact path="/src/components/Resume/EducationList.js" component={EducationList}/>
         <Route exact path="/src/components/Resume/ReferenceList.js" component={ReferenceList}/>
+        <Route exact path="/src/components/Resume/ContactList.js" component={ContactList}/>
         <Route exact path="/src/components/Resume/ProfessionalDesignationForm.js" component={ProfessionalDesignationForm}/>
         <Route exact path="/src/components/Resume/TellMeAboutYouForm.js" component={TellMeAboutYou}/>
         
