@@ -44,6 +44,7 @@ class ReferenceForm extends Component{
   return (
    
       <Form onSubmit={this.handleSubmit}>
+        <br/>
       <Header as= 'h2' content='stackable Grid' textAlign='center'> Do you have References?</Header>
         <Grid columns={2} stackable>
               
