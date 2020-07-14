@@ -58,7 +58,7 @@ function App() {
         
       </Switch>
 
-    <Landing />
+    {/* <Landing /> */}
 {/*    <SignIn />
     <SignUp />
     <ForgotPassword />}*/}
