@@ -71,7 +71,7 @@ continue = e => {
             <div>
             <Header 
             style={
-            {margin:"65px 0px 15px 0px"}
+            {margin:"85px 0px 15px 0px"}
             }  
             as= 'h1' 
             color='blue'

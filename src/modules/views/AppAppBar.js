@@ -83,7 +83,7 @@ function AppAppBar(props) {
             className={classes.left}
             href="/src/components/Resume/AchievmentsList.js"
           >
-            {'Achievments'}
+            {'Achievements'}
           </Link>
 
           <Link
@@ -149,6 +149,16 @@ function AppAppBar(props) {
             href="/src/components/Resume/TellMeAboutYouForm.js"
           >
             {'About Me'}
+          </Link>
+
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/Video.js"
+          >
+            {'Video'}
           </Link>
 
           

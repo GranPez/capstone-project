@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Button} from 'semantic-ui-react';
+import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
 
 
 class Video extends Component {
@@ -34,25 +34,80 @@ class Video extends Component {
 
     render() {
         return (
+            <Form onSubmit={this.handleSubmit}>
             <div>
-            <h1> Submit a video of yourself (Optional) </h1>
-            <form onSubmit={this.handleSubmit}>               
-                <input type="file" id="video"  value={this.state.video} onChange={this.handleChange} placeholder='video file' />  
+            <Header 
+            style={
+            {margin:"85px 0px 15px 0px"}
+            }  
+            as= 'h1' 
+            color='blue'
+            textAlign='center'
+            > 
+            Submit a video of yourself (Optional)
+            </Header>
 
-                <Button
+            <p           
+            style={
+            {margin:"15px 0px 15px 115px"}
+            }  
+            >
+            If you want to show us a video of yourself, upload it here:
+            </p>  
+            </div>
+            <Grid columns={1} container stackable>
+              <Grid.Row>   
+                <Grid.Column width={16}>
+                  <Segment>
+                    <Form.Input fluid
+                      label="Video file"
+                      type="file"
+                      id="video"
+                      placeholder='P.Eng., M.D., etc.' 
+                      value={this.state.video}
+                      onChange={this.handleChange}
+                    />
+                  </Segment>
+                </Grid.Column>
+              </Grid.Row>        
+                  <Button
                     label="Back"
                     primary={false}
                     style={styles.button}
                     onClick={this.back}
-                />  
-                <Button
+                  />  
+                  <Button
                     label="Next"
                     primary={true}
                     style={styles.button}
                     onClick={this.continue}
-                />               
-            </form>
-            </div>
+                  />
+            </Grid>     
+          </Form>
+       
+
+
+
+
+            // <div>
+            // <h1> Submit a video of yourself (Optional) </h1>
+            // <form onSubmit={this.handleSubmit}>               
+            //     <input type="file" id="video"  value={this.state.video} onChange={this.handleChange} placeholder='video file' />  
+
+            //     <Button
+            //         label="Back"
+            //         primary={false}
+            //         style={styles.button}
+            //         onClick={this.back}
+            //     />  
+            //     <Button
+            //         label="Next"
+            //         primary={true}
+            //         style={styles.button}
+            //         onClick={this.continue}
+            //     />               
+            // </form>
+            // </div>
         )
     }
 }
