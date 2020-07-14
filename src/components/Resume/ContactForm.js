@@ -42,9 +42,18 @@ class ContactForm extends Component{
   render(){
   return (
     <Form onSubmit={this.handleSubmit}>
-    <br/>
-    <Header as= 'h1' valuealign='center'textAlign='center'>What's your contact information?
-    </Header>
+    <div>
+      <Header 
+      style={
+      {margin:"80px 0px 0px 0px"}
+      } 
+      as= 'h1' 
+      color='blue'
+      textAlign='center' 
+      >
+      Your contact information
+      </Header>
+      </div>
     <Grid columns={1} container divided='vertically' stackable>
       <Grid.Row>
         <Grid.Column width={16}>         
