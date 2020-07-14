@@ -60,8 +60,35 @@ class EducationForm extends Component {
     evt.preventDefault();
     this.props.newEducation({...this.state, id:uuid.v4()});
     this.setState({schoolName:"", degree:"", major:"",schoolCountry:"",graduationYear:"", gpa:"",gpaScale:""});
+
+    localStorage.setItem('education',JSON.stringify(this.state));
   }
 
+  componentDidMount() {
+    this.EducationInfo = JSON.parse(localStorage.getItem('education'));
+ 
+    if (localStorage.getItem('education')) {
+        this.setState({
+          schoolName: this.EducationInfo.schoolName,
+          degree: this.EducationInfo.degree,
+          major: this.EducationInfo.major,
+          schoolCountry: this.EducationInfo.schoolCountry,
+          graduationYear: this.EducationInfo.graduationYear,
+          gpa: this.EducationInfo.gpa,
+          gpaScale: this.EducationInfo.gpaScale,      
+    })
+} else {
+    this.setState({
+      schoolName:'',
+      degree:'',
+      major:'',
+      schoolCountry:'',
+      graduationYear:'',
+      gpa:'',
+      gpaScale:''
+    })
+  }
+}
   render(){
 
     return(

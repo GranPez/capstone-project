@@ -28,9 +28,23 @@ continue = e => {
         alert(`You typed: ${this.state.aboutYou}`);
         this.setState({ aboutYou : ""});
         evt.preventDefault();
+
+        localStorage.setItem('aboutYou',JSON.stringify(this.state));
     }
 
-
+    componentDidMount() {
+        this.AboutYouInfo = JSON.parse(localStorage.getItem('aboutYou'));
+     
+        if (localStorage.getItem('aboutYou')) {
+            this.setState({
+                aboutYou: this.AboutYouInfo.aboutYou
+        })
+    } else {
+        this.setState({
+          aboutYou:''
+        })
+      }
+    }
     render() {
         return (
             <div>

@@ -38,8 +38,22 @@ export class CoreCompetenciesForm extends Component {
         competency6:"", 
         competency7:""*/
       });
+      localStorage.setItem('competency',JSON.stringify(this.state));  
     }
-
+    componentDidMount() {
+      this.CompetencyInfo = JSON.parse(localStorage.getItem('competency'));
+   
+      if (localStorage.getItem('competency')) {
+          this.setState({
+            competency: this.CompetencyInfo.competency,
+           
+      })
+  } else {
+      this.setState({
+        competency:''
+      })
+    }
+  }
   render(){
 
     return(

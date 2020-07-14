@@ -38,7 +38,38 @@ class ContactForm extends Component{
         app_state:"",
         app_zip_code:""});
 
+        localStorage.setItem('contact',JSON.stringify(this.state));
+
   }
+  componentDidMount() {
+    this.ContactInfo = JSON.parse(localStorage.getItem('contact'));
+ 
+    if (localStorage.getItem('contact')) {
+        this.setState({
+          app_name: this.ContactInfo.app_name,
+          app_lastname: this.ContactInfo.app_lastname,
+          app_email: this.ContactInfo.app_email,
+          app_phone_num: this.ContactInfo.app_phone_num,
+          app_address: this.ContactInfo.app_address,
+          app_country: this.ContactInfo.app_country,
+          app_city: this.ContactInfo.app_city,
+          app_state: this.ContactInfo.app_state,
+          app_zip_code: this.ContactInfo.app_zip_code
+    })
+} else {
+    this.setState({
+      app_name:'',
+      app_lastname:'',
+      app_email:'',
+      app_phone_num:'',
+      app_address:'',
+      app_country:'',
+      app_city:'',
+      app_state:'',
+      app_zip_code:''
+    })
+  }
+}
   render(){
   return (
     <Form onSubmit={this.handleSubmit}>

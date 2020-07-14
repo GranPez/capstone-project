@@ -47,8 +47,23 @@ continue = e => {
         //alert(`You typed: ${this.state.designation}`);
         this.setState({ designation : ""});
         evt.preventDefault();
-    }
 
+        localStorage.setItem('designation',JSON.stringify(this.state));
+    }
+    componentDidMount() {
+      this.DesignationInfo = JSON.parse(localStorage.getItem('designation'));
+   
+      if (localStorage.getItem('designation')) {
+          this.setState({
+            designation: this.DesignationInfo.designation,
+           
+      })
+  } else {
+      this.setState({
+        designation:''
+      })
+    }
+  }
 
     render() {
         return (
