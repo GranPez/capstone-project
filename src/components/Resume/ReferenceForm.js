@@ -44,19 +44,8 @@ class ReferenceForm extends Component{
   return (
    
       <Form onSubmit={this.handleSubmit}>
-      <div>
-      <Header
-      style={
-        {margin:"80px 0px 0px 0px"}
-      }  
-      as= 'h1' 
-      color='blue'
-      textAlign='center'
-      > 
-      Your References
-      </Header>
-
-      </div>
+        <br/>
+      <Header as= 'h2' content='stackable Grid' textAlign='center'> Do you have References?</Header>
         <Grid columns={2} stackable>
               
               <Grid.Column>

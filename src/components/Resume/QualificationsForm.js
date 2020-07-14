@@ -38,33 +38,14 @@ export class QualificationsForm extends Component {
 
     return(
     <Form onSubmit={this.handleSubmit}>
-      <div>
-        <Header 
-          style={
-          {margin:"60px 0px 15px 0px"}
-          }   
-          as='h1' 
-          color='blue'
-          textAlign='center'
-          > 
-          Qualifications
-        </Header>
-
-        <p           
-          style={
-          {margin:"15px"}
-          }  
-          >
-          Please list your qualifications one by one.
-        </p>     
-      </div>
+      <Header as= 'h1' textAlign='center'> Qualifications</Header>
+      <Header as= 'h3' textAlign='justify'> Please list your qualifications one by one. </Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
               <Segment>
                 <Form.Input fluid 
-                label='Qualification'
-                type='text' 
+                label='Qualification ' 
                 placeholder='Qualification' 
                 name='qualification'
                 id='qualification'
@@ -106,6 +87,10 @@ export class QualificationsForm extends Component {
               </Segment>
             </Grid.Column>
           </Grid.Row>*/}
+
+
+
+   
       </Grid>
     </Form>
     );

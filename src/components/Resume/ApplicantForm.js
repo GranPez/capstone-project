@@ -47,8 +47,8 @@ export class ApplicantForm extends Component {
         const {step} = this.state;
         const {firstName,lastName, email, password,
             key, id, schoolName, degree, major, schoolCountry, graduationYear, gpa, gpaScale, delEducation,
-            keyQ,idQ, qualification, delQualification,
-            keyC,idC, competency, delCompetency,
+            keyQ,idQ, qualification1, qualification2,qualification3, qualification4, delQualification,
+            keyC,idC, competency1, competency2,competency3, competency4, competency5, competency6, competency7, delCompetency,
             jobtitle, company, city, province_state, startdate, enddate, responsibilities1,  responsibilities2,  responsibilities3,  responsibilities4,  responsibilities5,  responsibilities6,  responsibilities7,  responsibilities8, 
             achievments1, achievments2, achievments3, achievments4, achievments5, achievments6, achievments7, achievments8,
             app_name, app_lastname, app_email, app_phone_num, app_address, app_country, app_city, app_state, app_zip_code,
@@ -58,8 +58,8 @@ export class ApplicantForm extends Component {
         }= this.state;
         const signInValues = {firstName,lastName, email, password};
         const educationListValues = {key,id, schoolName, degree, major, schoolCountry, graduationYear, gpa, gpaScale, delEducation};
-        const qualificationListValues = {keyQ,idQ, qualification,delQualification};
-        const competencyListValues = {keyC,idC, competency, delCompetency};
+        const qualificationListValues = {keyQ,idQ, qualification1, qualification2,qualification3, qualification4,delQualification};
+        const competencyListValues = {keyC,idC, competency1, competency2,competency3, competency4, competency5, competency6, competency7, delCompetency};
         const workExperienceListValues = {jobtitle, company, city, province_state, startdate, enddate, responsibilities1,  responsibilities2,  responsibilities3,       responsibilities4,  responsibilities5,  responsibilities6,  responsibilities7,  responsibilities8};
         const achievmentsListValues = {achievments1, achievments2, achievments3, achievments4, achievments5, achievments6, achievments7, achievments8};
         const contactValues = {app_name, app_lastname, app_email, app_phone_num, app_address, app_country, app_city, app_state, app_zip_code};

@@ -47,15 +47,16 @@ class CoreCompetenciesList extends Component {
       <CoreCompetency
       keyC={competency.id} 
       idC={competency.id} 
-      competency={competency.competency}
-      /*competency2={competency.competency2}
+      competency1={competency.competency1}
+      competency2={competency.competency2}
       competency3={competency.competency3}
       competency4={competency.competency4}
       competency5={competency.competency5}
       competency6={competency.competency6}
       competency7={competency.competency7}
       
-      competencies={[competency.competencies]}*/
+      competencies={[competency.competencies]}
+
       delCompetency={this.removeCompetency}  
       />
      );
@@ -65,7 +66,8 @@ class CoreCompetenciesList extends Component {
   
     <Grid container columns={1}>
       <div>
-
+        
+        <br />
         <CoreCompetenciesForm newCompetency={this.addCompetency} />
         <ul>
           {competencies}

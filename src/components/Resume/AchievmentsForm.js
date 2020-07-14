@@ -39,26 +39,8 @@ class AchievmentsForm extends Component {
   render(){
     return(
       <Form onSubmit={this.handleSubmit}>
-      <div>
-      <Header 
-      style={
-        {margin:"80px 0px 0px 0px"}
-      }  
-      as= 'h1' 
-      color='blue'
-      textAlign='center'
-      > 
-      Achievements
-      </Header>
-      <p           
-      style={
-      {margin:"15px"}
-      }  
-      >
-      Please list your achievements.
-      </p>  
-
-      </div>
+        <br/>
+      <Header as= 'h1' textAlign='center'>Achievements</Header>
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
