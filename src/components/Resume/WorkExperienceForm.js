@@ -29,7 +29,7 @@ handleChange(evt) {
            <div>
             <Header
             style={
-            {margin:"60px"}
+            {margin:"80px 0px 0px 0px"}
             }  
             as= 'h1'
             color='blue' 

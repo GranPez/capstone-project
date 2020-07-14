@@ -56,7 +56,7 @@ continue = e => {
             <div>
             <Header 
             style={
-            {margin:"60px"}
+            {margin:"65px 0px 15px 0px"}
             }  
             as= 'h1' 
             color='blue'
@@ -67,7 +67,7 @@ continue = e => {
 
             <p           
             style={
-            {margin:"15px"}
+            {margin:"15px 0px 15px 115px"}
             }  
             >
             Please list your designations, certifications and/or societies.

@@ -41,7 +41,7 @@ export class QualificationsForm extends Component {
       <div>
         <Header 
           style={
-          {margin:"60px"}
+          {margin:"60px 0px 15px 0px"}
           }   
           as='h1' 
           color='blue'
@@ -50,7 +50,7 @@ export class QualificationsForm extends Component {
           Qualifications
         </Header>
 
-         <p           
+        <p           
           style={
           {margin:"15px"}
           }  
@@ -63,7 +63,8 @@ export class QualificationsForm extends Component {
             <Grid.Column width={16}>
               <Segment>
                 <Form.Input fluid 
-                label='Qualification ' 
+                label='Qualification'
+                type='text' 
                 placeholder='Qualification' 
                 name='qualification'
                 id='qualification'
