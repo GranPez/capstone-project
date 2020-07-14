@@ -69,7 +69,7 @@ class EducationForm extends Component {
       <div>
         <Header 
           style={
-            {margin:"30px"}
+            {margin:"60px"}
           }   
           as= 'h1'
           color='blue' 

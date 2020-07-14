@@ -28,7 +28,7 @@ export class CoreCompetenciesForm extends Component {
   
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.newCompetency({...this.state, idQ:uuid.v4()});
+    this.props.newCompetency({...this.state, id:uuid.v4()});
     this.setState({
         competency:"",
         /*competency2:"", 
@@ -47,7 +47,7 @@ export class CoreCompetenciesForm extends Component {
       <div>
       <Header
        style={
-          {margin:"30px"}
+          {margin:"60px"}
        }  
        as= 'h1'
        color='blue' 

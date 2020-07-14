@@ -29,7 +29,7 @@ handleChange(evt) {
            <div>
             <Header
             style={
-            {margin:"30px"}
+            {margin:"60px"}
             }  
             as= 'h1'
             color='blue' 
@@ -45,7 +45,7 @@ handleChange(evt) {
             Please list your work experience, starting from the oldest to the recent one.
             </p>     
             </div>
-            
+
             <Grid container columns={1} >
             <Grid.Column width={16}>
                 <Form.Group widths='equal'>
