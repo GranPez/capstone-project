@@ -52,42 +52,57 @@ continue = e => {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
-                <Header as= 'h2' content='stackable Grid' textAlign='center' style={styles.h3}>Professional Designation (Optional)</Header>
-                <Grid columns={2} stackable></Grid>
-                    
-                <Grid.Column width={16}>
-                    <Segment>
-                        <Form.Input fluid
-                            label="Write your professional designation (if any):"
-                            type='text'
-                            name='designation'
-                            placeholder='P.Eng., M.D., etc.' 
-                            value={this.state.designation}
-                            onChange={this.handleChange}
-                        />
-                    </Segment>
-                </Grid.Column>
+          <Form onSubmit={this.handleSubmit}>
+            <div>
+            <Header 
+            style={
+            {margin:"65px 0px 15px 0px"}
+            }  
+            as= 'h1' 
+            color='blue'
+            textAlign='center'
+            > 
+            Professional Designation (Optional)
+            </Header>
 
-                    
-                        
-                        <Button
-                        label="Back"
-                        primary={false}
-                        style={styles.button}
-                        onClick={this.back}
-                        />  
-                        <Button
-                        label="Next"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.continue}
-                        />
-                
-                
-                
-            </Form>
-        )
+            <p           
+            style={
+            {margin:"15px 0px 15px 115px"}
+            }  
+            >
+            Please list your designations, certifications and/or societies.
+            </p>  
+            </div>
+            <Grid columns={1} container stackable>
+              <Grid.Row>   
+                <Grid.Column width={16}>
+                  <Segment>
+                    <Form.Input fluid
+                      label="Write your professional designation (if any):"
+                      type='text'
+                      name='designation'
+                      placeholder='P.Eng., M.D., etc.' 
+                      value={this.state.designation}
+                      onChange={this.handleChange}
+                    />
+                  </Segment>
+                </Grid.Column>
+              </Grid.Row>        
+                  <Button
+                    label="Back"
+                    primary={false}
+                    style={styles.button}
+                    onClick={this.back}
+                  />  
+                  <Button
+                    label="Next"
+                    primary={true}
+                    style={styles.button}
+                    onClick={this.continue}
+                  />
+            </Grid>     
+          </Form>
+        );
     }
 }
 

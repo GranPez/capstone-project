@@ -9,13 +9,13 @@ export class CoreCompetenciesForm extends Component {
   constructor(props){
     super(props);
     this.state =  {
-        competency1:"", 
-        competency2:"", 
+        competency:""}; 
+        /*competency2:"", 
         competency3:"",
         competency4:"",
         competency5:"",
         competency6:"",
-        competency7:""};
+        competency7:""};*/
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -28,30 +28,60 @@ export class CoreCompetenciesForm extends Component {
   
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.newCompetency({...this.state, idQ:uuid.v4()});
+    this.props.newCompetency({...this.state, id:uuid.v4()});
     this.setState({
-        competency1:"", competency2:"", competency3:"",
-        competency4:"", competency5:"", competency6:"", competency7:""});
+        competency:"",
+        /*competency2:"", 
+        competency3:"",
+        competency4:"", 
+        competency5:"", 
+        competency6:"", 
+        competency7:""*/
+      });
     }
 
   render(){
 
     return(
     <Form onSubmit={this.handleSubmit}>
-      <Header as= 'h1' textAlign='center'> Core Competencies</Header>
+      <div>
+      <Header
+       style={
+          {margin:"80px 0px 15px 0px"}
+       }  
+       as= 'h1'
+       color='blue' 
+       textAlign='center'
+       > 
+       Core Competencies
+       </Header>
+       <p           
+          style={
+          {margin:"15px"}
+          }  
+          >
+          Please list your competencies one by one.
+        </p>   
+      </div>
+
       <Grid columns={1} container divided='vertically' stackable>
           <Grid.Row> 
             <Grid.Column width={16}>
               <Segment>
                 <Form.Input fluid 
-                label='Competency 1' 
+                label='Competency' 
+                type='text'
                 placeholder='Competency' 
-                name='competency1'
+                id='competency'
+                name='competency'
                 value={this.state.competencies}
                 onChange={this.handleChange}
                 />
-            
-                <Form.Input fluid
+                <Grid.Column width={2}>
+                <Button color='blue'>Add </Button> 
+                </Grid.Column>
+
+{/*                 <Form.Input fluid
                 label='Competency 2' 
                 placeholder='Competency' 
                 name='competency2'
@@ -62,7 +92,7 @@ export class CoreCompetenciesForm extends Component {
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row> 
+           <Grid.Row> 
             <Grid.Column width={16}>
               <Segment>
                 <Form.Input fluid
@@ -114,15 +144,10 @@ export class CoreCompetenciesForm extends Component {
                 name='competency7'
                 value={this.state.competencies}
                 onChange={this.handleChange}
-                />
-              </Segment>
+                />*/}
+                </Segment>
             </Grid.Column>
           </Grid.Row>
-
-       <Grid.Column width={2}>
-          <Button color='blue'>Add </Button> 
-       </Grid.Column>
-   
       </Grid>
     </Form>
     );

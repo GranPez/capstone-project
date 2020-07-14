@@ -60,8 +60,6 @@ class QualificationsList extends Component {
   
     <Grid container columns={1}>
       <div>
-        <h1></h1>
-        <h1></h1>
         <br />
         <QualificationsForm newQualification={this.addQualification} />
         <ul>

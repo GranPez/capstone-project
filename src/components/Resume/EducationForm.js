@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import  {
-  Grid, Header, 
+  Grid, Header, Segment, 
   Button, Form} from 'semantic-ui-react';
 const uuid = require ('uuid');
 //import {Form} from 'semantic-ui-react-form-validator';
@@ -66,9 +66,30 @@ class EducationForm extends Component {
 
     return(
     <Form onSubmit={this.handleSubmit}>
-      <Header as= 'h1' textAlign='center'> Education</Header>
+      <div>
+        <Header 
+          style={
+            {margin:"60px 0px 15px 0px"}
+          }   
+          as= 'h1'
+          color='blue' 
+          textAlign='center'
+          > 
+          Education
+        </Header>
+
+        <p           
+          style={
+          {margin:"25px"}
+          }  
+          >
+          Please list your education experience, starting from the oldest to the recent one.
+        </p>  
+
+      </div>
         <Grid container columns={3} >
         <Grid.Column width={16}>
+          <Segment>
           <Form.Group widths='equal'>
             <Form.Input fluid 
               icon='university' 
@@ -97,14 +118,16 @@ class EducationForm extends Component {
               onChange={this.handleChange}
             />
           </Form.Group>
+          </Segment>
         </Grid.Column>
 
         <Grid.Column width={16}>
+          <Segment>
           <Form.Group>
             <Form.Input fluid 
               label='School Country' 
               placeholder='School Country' 
-              width={5}
+              width={6}
               name='schoolCountry'
               value={this.state.schoolCountry}
               onChange={this.handleChange}
@@ -112,6 +135,7 @@ class EducationForm extends Component {
             <Form.Input fluid 
               label='Graduation Year' 
               placeholder='Year'
+              width={5}
               name='graduationYear'
               value={this.state.graduationYear}
               onChange={this.handleChange} 
@@ -133,6 +157,7 @@ class EducationForm extends Component {
               onChange={this.handleChange}
             />
           </Form.Group>
+          </Segment>
         </Grid.Column>
 
        <Grid.Column width={2}>
