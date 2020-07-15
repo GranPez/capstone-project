@@ -101,6 +101,9 @@ continue = e => {
                       onChange={this.handleChange}
                     />
                   </Segment>
+
+ 
+                  
                 </Grid.Column>
               </Grid.Row>        
                   <Button
