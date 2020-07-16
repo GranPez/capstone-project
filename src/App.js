@@ -49,7 +49,7 @@ function App() {
       </nav> */}
       
       <Switch>
-        {/* <Route exact path="/" component={Landing}/> */}
+        <Route exact path="/" component={Landing}/>
         <Route exact path="/src/components/Resume/QualificationsList.js" component={QualificationsList}/>
         <Route exact path="/src/components/Resume/CoreCompetenciesList.js" component={CoreCompetenciesList}/>
         <Route exact path="/src/components/Resume/AchievmentsList.js" component={AchievmentsList}/>
