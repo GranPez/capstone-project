@@ -37,9 +37,33 @@ class ReferenceForm extends Component{
       company_name:"",
       contact_relationship:""
       });
-
+      localStorage.setItem('reference',JSON.stringify(this.state));
   }
-
+  componentDidMount() {
+    this.ReferenceInfo = JSON.parse(localStorage.getItem('reference'));
+ 
+    if (localStorage.getItem('reference')) {
+        this.setState({
+          contact_name: this.ReferenceInfo.contact_name,
+          contact_lastname: this.ReferenceInfo.contact_lastname,
+          contact_position: this.ReferenceInfo.contact_position,
+          contact_email: this.ReferenceInfo.contact_email,
+          contact_phone: this.ReferenceInfo.contact_phone,
+          company_name: this.ReferenceInfo.company_name,
+          contact_relationship: this.ReferenceInfo.contact_relationship
+    })
+} else {
+    this.setState({
+      contact_name:'',
+      contact_lastname:'',
+      contact_position:'', 
+      contact_email:'',
+      contact_phone:'', 
+      company_name:'',
+      contact_relationship:''
+    })
+  }
+}
   render(){
   return (
    

@@ -47,8 +47,23 @@ class ProfessionalDesignationForm extends Component {
         //alert(`You typed: ${this.state.designation}`);
         this.setState({ designation : ""});
         evt.preventDefault();
-    }
 
+        localStorage.setItem('designation',JSON.stringify(this.state));
+    }
+    componentDidMount() {
+      this.DesignationInfo = JSON.parse(localStorage.getItem('designation'));
+   
+      if (localStorage.getItem('designation')) {
+          this.setState({
+            designation: this.DesignationInfo.designation,
+           
+      })
+  } else {
+      this.setState({
+        designation:''
+      })
+    }
+  }
 
     render() {
         return (
@@ -56,7 +71,7 @@ class ProfessionalDesignationForm extends Component {
             <div>
             <Header 
             style={
-            {margin:"65px 0px 15px 0px"}
+            {margin:"85px 0px 15px 0px"}
             }  
             as= 'h1' 
             color='blue'
@@ -86,6 +101,9 @@ class ProfessionalDesignationForm extends Component {
                       onChange={this.handleChange}
                     />
                   </Segment>
+
+ 
+                  
                 </Grid.Column>
               </Grid.Row>
                 <div> 

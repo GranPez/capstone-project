@@ -32,8 +32,21 @@ export class QualificationsForm extends Component {
         qualification3:"",
         qualification4:""*/
       });
+      localStorage.setItem('qualification',JSON.stringify(this.state));
     }
-
+    componentDidMount() {
+      this.QualificationInfo = JSON.parse(localStorage.getItem('qualification'));
+   
+      if (localStorage.getItem('qualification')) {
+          this.setState({
+            qualification: this.QualificationInfo.qualification
+      })
+  } else {
+      this.setState({
+        qualification:''
+      })
+    }
+  }
   render(){
 
     return(

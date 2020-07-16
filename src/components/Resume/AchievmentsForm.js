@@ -34,8 +34,37 @@ class AchievmentsForm extends Component {
       achievments6:"",
       achievments7:"",
       achievments8:""});
+
+      localStorage.setItem('achievements',JSON.stringify(this.state));
   }
 
+  componentDidMount() {
+    this.AchievementInfo = JSON.parse(localStorage.getItem('achievements'));
+ 
+    if (localStorage.getItem('achievements')) {
+        this.setState({
+          achievments1: this.AchievementInfo.achievments1,
+          achievments2: this.AchievementInfo.achievments2,
+          achievments3: this.AchievementInfo.achievments3,
+          achievments4: this.AchievementInfo.achievments4,
+          achievments5: this.AchievementInfo.achievments5,
+          achievments6: this.AchievementInfo.achievments6,
+          achievments7: this.AchievementInfo.achievments7,
+          achievments8: this.AchievementInfo.achievments8
+    })
+} else {
+    this.setState({
+      achievments1:'',
+      achievments2:'',
+      achievments3:'',
+      achievments4:'',
+      achievments5:'',
+      achievments6:'',
+      achievments7:'',
+      achievments8:''
+    })
+  }
+}
   render(){
     return(
       <Form onSubmit={this.handleSubmit}>

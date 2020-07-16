@@ -6,6 +6,18 @@ import Landing from './Landing';
 //import ForgotPassword from './ForgotPasword';
 import Index from './components/Resume/Index';
 import { Route, Switch} from 'react-router-dom';
+
+import ProfessionalDesignationForm from './components/Resume/ProfessionalDesignationForm';
+import ReferenceList from './components/Resume/ReferenceList';
+import EducationList from './components/Resume/EducationList';
+import QualificationsList from './components/Resume/QualificationsList';
+import ContactList from './components/Resume/ContactList';
+import CoreCompetenciesList from './components/Resume/CoreCompetenciesList';
+import AchievmentsList from './components/Resume/AchievmentsList';
+import WorkExperienceList from './components/Resume/WorkExperienceList';
+import TellMeAboutYou from './components/Resume/TellMeAboutYouForm';
+import Video from './components/Resume/Video';
+
 // import Qualification from './components/Resume/Qualification';
 // import SignIn from './components/Resume/SignIn';
 // import About from './components/Resume/About';
@@ -16,15 +28,6 @@ import { Route, Switch} from 'react-router-dom';
 // import WorkExperienceForm from './components/Resume/WorkExperienceForm';
 // import EducationForm from './components/Resume/EducationForm';
 // import ReferenceForm from './components/Resume/ReferenceForm';
-import ProfessionalDesignationForm from './components/Resume/ProfessionalDesignationForm';
-import ReferenceList from './components/Resume/ReferenceList';
-import EducationList from './components/Resume/EducationList';
-import QualificationsList from './components/Resume/QualificationsList';
-import ContactList from './components/Resume/ContactList';
-import CoreCompetenciesList from './components/Resume/CoreCompetenciesList';
-import AchievmentsList from './components/Resume/AchievmentsList';
-import WorkExperienceList from './components/Resume/WorkExperienceList';
-import TellMeAboutYou from './components/Resume/TellMeAboutYouForm';
 //import Template from './Template';
 
 function App() {
@@ -55,6 +58,7 @@ function App() {
         <Route exact path="/src/components/Resume/ContactList.js" component={ContactList}/>
         <Route exact path="/src/components/Resume/ProfessionalDesignationForm.js" component={ProfessionalDesignationForm}/>
         <Route exact path="/src/components/Resume/TellMeAboutYouForm.js" component={TellMeAboutYou}/>
+        <Route exact path="/src/components/Resume/Video.js" component={Video}/>
         
       </Switch>
 

@@ -5,8 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
 //import StudyIncLogo200 from '/src/StudyIncLogo200';
 
 
@@ -35,7 +35,7 @@ const styles = (theme) => ({
   rightLink: {
     fontSize: 16,
     color: theme.palette.common.white,
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(1),
   },
   linkSecondary: {
     color: theme.palette.secondary.main,
@@ -49,9 +49,9 @@ function AppAppBar(props) {
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"> */}
+            {/* <MenuIcon /> */}
+          {/* </IconButton> */}
         <img src="http://studyinc.org/wp-content/uploads/2018/11/StudyInc-Logo-200.png" alt="logo" className={classes.logo} />
         
         <div className={classes.left} />         
@@ -151,6 +151,16 @@ function AppAppBar(props) {
             href="/src/components/Resume/TellMeAboutYouForm.js"
           >
             {'About Me'}
+          </Link>
+
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/src/components/Resume/Video.js"
+          >
+            {'Video'}
           </Link>
 
           

@@ -17,11 +17,53 @@ handleSubmit(evt) {
     this.setState({jobtitle: "", company: "", city: "", province_state: "", startdate: "", enddate: "", responsibility1: "",
     responsibility2: "", responsibility3: "", responsibility4: "", responsibility5: "", responsibility6: "",
     responsibility7: "", responsibility8: ""});
+
+    localStorage.setItem('workExp',JSON.stringify(this.state));
 }
 handleChange(evt) {
     this.setState ({
         [evt.target.name]: evt.target.value
     });
+}
+componentDidMount() {
+  this.WorkExpInfo = JSON.parse(localStorage.getItem('workExp'));
+
+  if (localStorage.getItem('workExp')) {
+      this.setState({
+        jobtitle: this.WorkExpInfo.jobtitle,
+        company: this.WorkExpInfo.company,
+        city: this.WorkExpInfo.city,
+        province_state: this.WorkExpInfo.province_state,
+        startdate: this.WorkExpInfo.startdate,
+        enddate: this.WorkExpInfo.enddate,
+        responsibility1: this.WorkExpInfo.responsibility1,
+        responsibility2: this.WorkExpInfo.responsibility2,
+        responsibility3: this.WorkExpInfo.responsibility3,
+        responsibility4: this.WorkExpInfo.responsibility4,
+        responsibility5: this.WorkExpInfo.responsibility5,
+        responsibility6: this.WorkExpInfo.responsibility6,
+        responsibility7: this.WorkExpInfo.responsibility7,
+        responsibility8: this.WorkExpInfo.responsibility8
+        
+  })
+} else {
+  this.setState({
+    jobtitle: '',
+    company: '',
+    city: '',
+    province_state: '',
+    startdate: '',
+    enddate: '',
+    responsibility1: '',
+    responsibility2: '',
+    responsibility3: '',
+    responsibility4: '',
+    responsibility5: '',
+    responsibility6: '',
+    responsibility7: '',
+    responsibility8: ''
+  })
+}
 }
     render() {
         return (
