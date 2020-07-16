@@ -17,6 +17,7 @@ import AchievmentsList from './components/Resume/AchievmentsList';
 import WorkExperienceList from './components/Resume/WorkExperienceList';
 import TellMeAboutYou from './components/Resume/TellMeAboutYouForm';
 import Video from './components/Resume/Video';
+import Template from './components/Resume/Template';
 
 // import Qualification from './components/Resume/Qualification';
 // import SignIn from './components/Resume/SignIn';
@@ -28,7 +29,7 @@ import Video from './components/Resume/Video';
 // import WorkExperienceForm from './components/Resume/WorkExperienceForm';
 // import EducationForm from './components/Resume/EducationForm';
 // import ReferenceForm from './components/Resume/ReferenceForm';
-//import Template from './Template';
+
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
       </nav> */}
       
       <Switch>
-        <Route exact path="/" component={Landing}/>
+        {/* <Route exact path="/" component={Landing}/> */}
         <Route exact path="/src/components/Resume/QualificationsList.js" component={QualificationsList}/>
         <Route exact path="/src/components/Resume/CoreCompetenciesList.js" component={CoreCompetenciesList}/>
         <Route exact path="/src/components/Resume/AchievmentsList.js" component={AchievmentsList}/>
@@ -67,7 +68,7 @@ function App() {
     <SignUp />
     <ForgotPassword />}*/}
     <Index />
-    {/*<Template /> */}
+    <Template />
     </div>
   );
 }
