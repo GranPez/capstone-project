@@ -77,18 +77,25 @@ continue = e => {
                   </Segment>
                 </Grid.Column>
               </Grid.Row>        
-                  <Button
-                    label="Back"
-                    primary={false}
-                    style={styles.button}
-                    onClick={this.back}
-                  />  
+              <div> 
+                  <Link to = '/src/components/Resume/ReferenceList.js'>   
+                    <Button
+                      label="Back"
+                      primary={false}
+                      style={styles.button}
+                    />  
+                  </Link>
+                </div>
+                    
+                <div>
+                  <Link to ="/src/components/Resume/Video.js"> 
                   <Button
                     label="Next"
                     primary={true}
                     style={styles.button}
-                    onClick={this.continue}
                   />
+                  </Link>
+                </div>
             </Grid>     
           </Form>
        
