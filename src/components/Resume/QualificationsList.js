@@ -7,6 +7,7 @@ import QualificationsForm from './QualificationsForm';
 
 class QualificationsList extends Component {
 //Pagination
+
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
