@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
-
+import {Link} from 'react-router-dom';
 const styles = {
     button:{
         margin: 15
@@ -22,15 +22,15 @@ const styles = {
 
 class ProfessionalDesignationForm extends Component {
 //Pagination
-continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-  }
+// continue = e => {
+//     e.preventDefault();
+//     this.props.nextStep();
+//   }
 
-  back = e => {
-    e.preventDefault();
-    this.props.prevStep();
-    }
+//   back = e => {
+//     e.preventDefault();
+//     this.props.prevStep();
+//     }
 
     //Professional Designation Form
     constructor(props){
@@ -105,19 +105,27 @@ continue = e => {
  
                   
                 </Grid.Column>
-              </Grid.Row>        
-                  <Button
-                    label="Back"
-                    primary={false}
-                    style={styles.button}
-                    onClick={this.back}
-                  />  
+              </Grid.Row>
+                <div> 
+                  <Link to = '/'>   
+                    <Button
+                      label="Back"
+                      primary={false}
+                      style={styles.button}
+                    />  
+                  </Link>
+                </div>
+                   
+                <div>
+                  <Link to ="/src/components/Resume/EducationList.js"> 
                   <Button
                     label="Next"
                     primary={true}
                     style={styles.button}
-                    onClick={this.continue}
                   />
+                  </Link>
+                </div>
+                 
             </Grid>     
           </Form>
         );

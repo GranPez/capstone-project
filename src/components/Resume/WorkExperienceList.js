@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Grid, Button} from 'semantic-ui-react';
 import WorkExperience from './WorkExperience';
 import WorkExperienceForm from './WorkExperienceForm';
+import {Link} from 'react-router-dom';
 
 class WorkExperienceList extends Component {
     //Pagination
@@ -58,18 +59,25 @@ class WorkExperienceList extends Component {
                 <ul>
                   {jobs}
                 </ul>
-                <Button
-                  label="Back"
-                  primary={false}
-                  style={styles.button}
-                  onClick={this.back}
-                />  
-                <Button
-                  label="Next"
-                  primary={true}
-                  style={styles.button}
-                  onClick={this.continue}
-                /> 
+                <div> 
+                  <Link to = '/src/components/Resume/CoreCompetenciesList.js'>   
+                    <Button
+                      label="Back"
+                      primary={false}
+                      style={styles.button}
+                    />  
+                  </Link>
+                </div>
+                    
+                <div>
+                  <Link to ="/src/components/Resume/AchievmentsList.js"> 
+                  <Button
+                    label="Next"
+                    primary={true}
+                    style={styles.button}
+                  />
+                  </Link>
+                </div>
               </div>
             </Grid>
             );
