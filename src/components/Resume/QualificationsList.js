@@ -3,6 +3,7 @@ import  {Grid, Button} from 'semantic-ui-react';
 //import {Form} from 'semantic-ui-react-form-validator';
 import Qualification from './Qualification';
 import QualificationsForm from './QualificationsForm';
+import {Link} from 'react-router-dom';
 
 
 class QualificationsList extends Component {
@@ -66,18 +67,25 @@ class QualificationsList extends Component {
           <br/>
           {qualifications}
         </ul>
-        <Button
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={this.back}
-        />    
-        <Button
-          label="Next"
-          primary={true}
-          style={styles.button}
-          onClick={this.continue}
-        />
+        <div> 
+          <Link to = '/src/components/Resume/EducationList.js'>   
+            <Button
+              label="Back"
+              primary={false}
+              style={styles.button}
+            />  
+          </Link>
+        </div>
+            
+        <div>
+          <Link to ="/src/components/Resume/CoreCompetenciesList.js"> 
+          <Button
+            label="Next"
+            primary={true}
+            style={styles.button}
+          />
+          </Link>
+        </div>
       </div>
     </Grid>
    

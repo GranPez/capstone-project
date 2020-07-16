@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Button} from 'semantic-ui-react';
-
+import {Link} from 'react-router-dom';
 class TellMeAboutYou extends Component {
     //Pagination
 continue = e => {
@@ -40,18 +40,25 @@ continue = e => {
                 <label htmlFor='aboutYou' > Write a few words describing yourself:  </label>
                 <input type="text" id="aboutYou"  value={this.state.aboutYou} onChange={this.handleChange} placeholder='Describe yourself in this space' />
                 
-            <Button
-            label="Back"
-            primary={false}
-            style={styles.button}
-            onClick={this.back}
-            />  
-            <Button
-            label="Next"
-            primary={true}
-            style={styles.button}
-            onClick={this.continue}
-            />    
+                <div> 
+                  <Link to = '/src/components/Resume/ReferenceList.js'>   
+                    <Button
+                      label="Back"
+                      primary={false}
+                      style={styles.button}
+                    />  
+                  </Link>
+                </div>
+                    
+                <div>
+                  <Link to ="/"> 
+                  <Button
+                    label="Next"
+                    primary={true}
+                    style={styles.button}
+                  />
+                  </Link>
+                </div>
             </form>
             </div>
         )

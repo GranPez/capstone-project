@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Grid, Button} from 'semantic-ui-react';
 import Achievments from './Achievments';
 import AchievmentsForm from './AchievmentsForm';
+import {Link} from 'react-router-dom';
 
 export class AchievmentsList extends Component {
 //Pagination
@@ -60,18 +61,25 @@ export class AchievmentsList extends Component {
         <ul>
           {achievments}
         </ul>
-        <Button
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={this.back}
-        />    
-        <Button
-          label="Next"
-          primary={true}
-          style={styles.button}
-          onClick={this.continue}
-        />
+        <div> 
+          <Link to = '/src/components/Resume/WorkExperienceList.js'>   
+            <Button
+              label="Back"
+              primary={false}
+              style={styles.button}
+            />  
+          </Link>
+        </div>
+            
+        <div>
+          <Link to ="/src/components/Resume/ContactList.js"> 
+          <Button
+            label="Next"
+            primary={true}
+            style={styles.button}
+          />
+          </Link>
+        </div>
       </div>
     </Grid>
     );

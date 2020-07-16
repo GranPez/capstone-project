@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Reference from './Reference';
 import ReferenceForm from './ReferenceForm';
 import  {Grid, Button} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 class ReferenceList extends Component {
 
@@ -61,18 +62,25 @@ class ReferenceList extends Component {
           <ul>
             {references}
           </ul>
-          <Button
-            label="Back"
-            primary={false}
-            style={styles.button}
-            onClick={this.back}
-          />  
-          <Button
-            label="Next"
-            primary={true}
-            style={styles.button}
-            onClick={this.continue}
-          /> 
+          <div> 
+            <Link to = '/src/components/Resume/ContactList.js'>   
+              <Button
+                label="Back"
+                primary={false}
+                style={styles.button}
+              />  
+            </Link>
+          </div>
+              
+          <div>
+            <Link to ="/src/components/Resume/TellMeAboutYouForm.js"> 
+            <Button
+              label="Next"
+              primary={true}
+              style={styles.button}
+            />
+            </Link>
+          </div>
         </div>
       </Grid>
     ); 

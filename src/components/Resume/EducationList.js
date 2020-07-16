@@ -4,6 +4,7 @@ import  {Grid, Button} from 'semantic-ui-react';
 //import ResumeHeader from "./Header"
 import Education from './Education';
 import EducationForm from './EducationForm';
+import {Link} from 'react-router-dom';
 
 
 export class EducationList extends Component {
@@ -71,18 +72,25 @@ export class EducationList extends Component {
         <ul>
           {educations}
         </ul>
-        <Button
-          label="Back"
-          primary={false}
-          style={styles.button}
-          onClick={this.back}
-        />    
-        <Button
-          label="Next"
-          primary={true}
-          style={styles.button}
-          onClick={this.continue}
-        />
+        <div> 
+          <Link to = '/src/components/Resume/ProfessionalDesignationForm.js'>   
+            <Button
+              label="Back"
+              primary={false}
+              style={styles.button}
+            />  
+          </Link>
+        </div>
+            
+        <div>
+          <Link to ="/src/components/Resume/QualificationsList.js"> 
+          <Button
+            label="Next"
+            primary={true}
+            style={styles.button}
+          />
+          </Link>
+        </div>
       </div>
     </Grid>
    
