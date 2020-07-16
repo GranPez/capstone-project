@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
+import tempImage from'./Sample Sales Template.png';
+
 const styles = {
     button:{
         margin: 15
@@ -76,7 +78,17 @@ class ProfessionalDesignationForm extends Component {
             as= 'h1' 
             color='blue'
             textAlign='center'
-            > 
+            >
+              <div>
+              <img src={tempImage}
+              width="50%"
+              height="50%"
+              box-shadow= "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+              alt="Template" /> 
+              </div> 
+
+
+
             Professional Designation (Optional)
             </Header>
 
