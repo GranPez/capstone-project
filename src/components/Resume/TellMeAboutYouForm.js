@@ -48,7 +48,7 @@ continue = e => {
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
-            <div>
+           
             <Header 
             style={
             {margin:"85px 0px 15px 0px"}
@@ -58,34 +58,10 @@ continue = e => {
             textAlign='center'
             > 
             Tell us about yourself (Optional)
-            </Header>
-
-            <h1 align='center'> Tell us about yourself </h1>
-            <form onSubmit={this.handleSubmit}>
-                <label htmlFor='aboutYou' > Write a few words describing yourself:  </label>
-                <input type="text" id="aboutYou"  value={this.state.aboutYou} onChange={this.handleChange} placeholder='Describe yourself in this space' />
-                
-                <div> 
-                  <Link to = '/src/components/Resume/ReferenceList.js'>   
-                    <Button
-                      label="Back"
-                      primary={false}
-                      style={styles.button}
-                    />  
-                  </Link>
-                </div>
+            </Header>          
                     
-                <div>
-                  <Link to ="/"> 
-                  <Button
-                    label="Next"
-                    primary={true}
-                    style={styles.button}
-                  />
-                  </Link>
-                </div>
-            </form>
-            </div>
+             
+           
             <Grid columns={1} container stackable>
               <Grid.Row>   
                 <Grid.Column width={16}>
@@ -119,27 +95,8 @@ continue = e => {
 
 
 
-            // <div>
-
-            // <h1 align='center'> Tell us about yourself </h1>
-            // <form onSubmit={this.handleSubmit}>
-            //     <label htmlFor='aboutYou' > Write a few words describing yourself:  </label>
-            //     <input type="text" id="aboutYou"  value={this.state.aboutYou} onChange={this.handleChange} placeholder='Describe yourself in this space' />
                 
-            // <Button
-            // label="Back"
-            // primary={false}
-            // style={styles.button}
-            // onClick={this.back}
-            // />  
-            // <Button
-            // label="Next"
-            // primary={true}
-            // style={styles.button}
-            // onClick={this.continue}
-            // />    
-            // </form>
-            // </div>
+       
         )
     }
 }
