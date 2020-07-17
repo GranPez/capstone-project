@@ -43,7 +43,7 @@ function ProductHero(props) {
         Please register. This will help businesses and human resource managers on our platform find your resume.
       </Typography>
       <div>
-      <Link to='/src/SignIn.js'>
+      <Link to='/src/SignUp.js'>
       <Button
         color="secondary"
         variant="contained"

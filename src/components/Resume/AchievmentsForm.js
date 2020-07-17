@@ -97,7 +97,7 @@ class AchievmentsForm extends Component {
                 id = "achievments1"
                 label = "Achievements 1"
                 placeholder = "Achievements"
-                name = ""
+                name = "achievments1"
                 value = {this.state.achievments}
                 onChange = {this.handleChange}
             />

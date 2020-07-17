@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import AppAppBar from '../../modules/views/AppAppBar';
+// import App from "../../App";
+// import Template from "./Template";
 
 
 
@@ -33,6 +35,8 @@ class Video extends Component {
         this.setState({ video : ""});
         evt.preventDefault();
     }
+
+
 
 
     render() {
@@ -86,7 +90,8 @@ class Video extends Component {
                     
                 <div>
                   <Link to ="/src/components/Resume/Template.js"> 
-                  <Button
+                  <Button 
+                   onClick= "<Template />"
                     label="Submit"
                     primary={true}
                     style={styles.button}

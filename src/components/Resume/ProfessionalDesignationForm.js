@@ -132,6 +132,10 @@ class ProfessionalDesignationForm extends Component {
                     />
                   </Segment>
 
+                  <Grid.Column width={2}>
+                <Button color='blue'>Add </Button> 
+                </Grid.Column>
+
  
                   
                 </Grid.Column>

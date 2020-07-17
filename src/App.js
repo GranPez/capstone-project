@@ -18,7 +18,15 @@ import WorkExperienceList from './components/Resume/WorkExperienceList';
 import TellMeAboutYou from './components/Resume/TellMeAboutYouForm';
 import Video from './components/Resume/Video';
 // import SignIn from './components/Resume/SignIn';
-
+// import About from './components/Resume/About';
+// import QualificationsForm from './components/Resume/QualificationsForm';
+// import ContactForm from './components/Resume/ContactForm';
+// import CoreCompetenciesForm from './components/Resume/CoreCompetenciesForm';
+// import AchievmentsForm from './components/Resume/AchievmentsForm';
+// import WorkExperienceForm from './components/Resume/WorkExperienceForm';
+// import EducationForm from './components/Resume/EducationForm';
+// import ReferenceForm from './components/Resume/ReferenceForm';
+import Template from './components/Resume/Template';
 
 function App() {
   return (
@@ -26,7 +34,7 @@ function App() {
       
       <Switch>
         <Route exact path="/" component={Landing}/>
-        <Route exact path="/src/components/Resume/SignIn.js" component={SignIn}/>
+        {/* <Route exact path="/src/components/Resume/SignIn.js" component={SignIn}/> */}
         <Route exact path="/src/components/Resume/QualificationsList.js" component={QualificationsList}/>
         <Route exact path="/src/components/Resume/CoreCompetenciesList.js" component={CoreCompetenciesList}/>
         <Route exact path="/src/components/Resume/AchievmentsList.js" component={AchievmentsList}/>
@@ -38,7 +46,8 @@ function App() {
         <Route exact path="/src/components/Resume/TellMeAboutYouForm.js" component={TellMeAboutYou}/>
         <Route exact path="/src/components/Resume/Video.js" component={Video}/>
         <Route exact path="/src/SignIn.js" component={SignIn}/>
-        <Route exact path="/src/SignUp.js.js" component={SignUp}/>
+        <Route exact path="/src/SignUp.js" component={SignUp}/>
+        <Route exact path="/src/components/Resume/Template.js" component={Template}/>
         
       </Switch>
 
@@ -47,7 +56,7 @@ function App() {
     {/* <SignUp /> */}
     {/* <ForgotPassword /> */}
     {/* <Index /> */}
-    {/*<Template /> */}
+    {/* <Template /> */}
     </div>
   );
 }
