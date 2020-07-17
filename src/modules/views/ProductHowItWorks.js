@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
+import {Link} from 'react-router-dom';
 
 const styles = (theme) => ({
   root: {
@@ -105,7 +106,19 @@ function ProductHowItWorks(props) {
             </Grid>
           </Grid>
         </div>
-        <Button
+        <Link to='/src/SignUp.js'>
+          <Button
+            color="secondary"
+            variant="contained"
+            size="large"
+            className={classes.button}
+            component="a"
+          >
+            Get Started
+          </Button>
+        </Link>
+
+        {/* <Button
           color="secondary"
           size="large"
           variant="contained"
@@ -114,7 +127,7 @@ function ProductHowItWorks(props) {
           href="/src/SignUp.js"
         >
           Get started
-        </Button>
+        </Button> */}
       </Container>
     </section>
   );
