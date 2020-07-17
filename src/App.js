@@ -34,7 +34,7 @@ function App() {
       
       <Switch>
         <Route exact path="/" component={Landing}/>
-        <Route exact path="/src/components/Resume/SignIn.js" component={SignIn}/>
+        {/* <Route exact path="/src/components/Resume/SignIn.js" component={SignIn}/> */}
         <Route exact path="/src/components/Resume/QualificationsList.js" component={QualificationsList}/>
         <Route exact path="/src/components/Resume/CoreCompetenciesList.js" component={CoreCompetenciesList}/>
         <Route exact path="/src/components/Resume/AchievmentsList.js" component={AchievmentsList}/>
@@ -46,7 +46,7 @@ function App() {
         <Route exact path="/src/components/Resume/TellMeAboutYouForm.js" component={TellMeAboutYou}/>
         <Route exact path="/src/components/Resume/Video.js" component={Video}/>
         <Route exact path="/src/SignIn.js" component={SignIn}/>
-        <Route exact path="/src/SignUp.js.js" component={SignUp}/>
+        <Route exact path="/src/SignUp.js" component={SignUp}/>
         <Route exact path="/src/components/Resume/Template.js" component={Template}/>
         
       </Switch>
