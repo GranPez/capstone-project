@@ -73,7 +73,7 @@ function ProductValues(props) {
                 alt="graph"
               />
               <Typography variant="h6" className={classes.title}>
-                Find your dreamed job
+                Find your dream job
               </Typography>
               <Typography variant="h5">
                 {'StudyInc provides latest and quality jobs from prominent startups and enterprises.'} 
@@ -93,7 +93,7 @@ function ProductValues(props) {
               </Typography>
               <Typography variant="h5">
                 {'By registering, you will access to our free job-posting service. '}
-                {'StudyInc devotes to helping companies hire the right talent. With more than 10,000 resumes in our talent pool, SudyInc provides recruitment and professional head hunting consultations'}
+                {'StudyInc devotes to helping companies hire the right talent. StudyInc provides recruitment and professional head hunting consultations'}
               </Typography>
             </div>
           </Grid>

@@ -38,7 +38,7 @@ class ProfessionalDesignationForm extends Component {
     //Professional Designation Form
     constructor(props){
         super(props);
-        this.state = { designation: ""};
+        this.state = { designation: "", App_Positon: ""};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -89,21 +89,39 @@ class ProfessionalDesignationForm extends Component {
               alt="Template" /> 
               </div> 
               
-            Professional Designation (Optional)
             </Header>
 
-            <p           
-            style={
-            {margin:"15px 0px 15px 115px"}
-            }  
-            >
-            Please list your designations, certifications and/or societies.
-            </p>  
+      
             </div>
             <Grid columns={1} container stackable>
               <Grid.Row>   
                 <Grid.Column width={16}>
+
+                <Segment>
+                    <Form.Input fluid
+                      label="What position are you applying for?"
+                      type='text'
+                      name='App_Position'
+                      placeholder='Sales Representative, Project Manager, Web Development, etc.' 
+                      value={this.state.designation}
+                      onChange={this.handleChange}
+                    />
+                  </Segment>
+
                   <Segment>
+
+                    <Header
+                      // style={
+                      //   {margin:"85px 0px 15px 0px"}
+                      //   }  
+                        as= 'h1' 
+                        color='blue'
+                        textAlign='center'>     
+                  Professional Designation (Optional)   
+                   </Header>
+                    <p>
+                    Please list your designations, certifications and/or societies.
+                    </p>  
                     <Form.Input fluid
                       label="Write your professional designation (if any):"
                       type='text'
@@ -113,6 +131,10 @@ class ProfessionalDesignationForm extends Component {
                       onChange={this.handleChange}
                     />
                   </Segment>
+
+                  <Grid.Column width={2}>
+                <Button color='blue'>Add </Button> 
+                </Grid.Column>
 
  
                   

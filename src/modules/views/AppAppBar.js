@@ -6,9 +6,6 @@ import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 import StudyInc_White from './/StudyIncLogo-White (1).jpg';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
-//import StudyIncLogo200 from '/src/StudyIncLogo200';
 
 
 const styles = (theme) => ({
@@ -50,21 +47,28 @@ function AppAppBar(props) {
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"> */}
-            {/* <MenuIcon /> */}
-          {/* </IconButton> */}
 
-          <div>
+        <div className={classes.logo} />   
+            <Link to="/src/Landing.js">
               <img src={StudyInc_White}
               width="50%"
               height="50%"
               className={classes.logo}
-              // box-shadow= "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-              alt="logo" /> 
-              </div> 
-        
-        <div className={classes.left} />         
-        <Link
+              alt="logo" />
+            </Link>
+          
+            <div className={classes.left} />         
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/"
+          >
+            {'StudyInc'}
+          </Link>
+          <div className={classes.left} />         
+          <Link
             variant="h6"
             underline="none"
             color="inherit"
@@ -182,7 +186,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/"
+              href="/src/SignIn.js"
             >
               {'Sign In'}
             </Link>
@@ -191,11 +195,10 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/"
+              href="/src/SignUp.js"
             >
               {'Sign Up'}
             </Link>
-          {/* </div> */}
         </Toolbar>
       </AppBar>
       <div className={classes.placeholder} />
