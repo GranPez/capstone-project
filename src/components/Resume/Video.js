@@ -36,6 +36,8 @@ class Video extends Component {
         evt.preventDefault();
     }
 
+    loadTemplate ()
+
 
     render() {
         return (
@@ -88,7 +90,8 @@ class Video extends Component {
                     
                 <div>
                   <Link to ="/src/components/Resume/Template.js"> 
-                  <Button
+                  <Button 
+                   onClick= "<Template />"
                     label="Submit"
                     primary={true}
                     style={styles.button}

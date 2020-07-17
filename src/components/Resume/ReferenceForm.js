@@ -1,4 +1,3 @@
-// Updated 2020-07-08 14:00
 import React, { Component } from 'react';
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
 const uuid = require ('uuid');
