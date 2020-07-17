@@ -111,7 +111,7 @@ function ProductHowItWorks(props) {
           variant="contained"
           className={classes.button}
           component="a"
-          href="/premium-themes/studyinc/sign-up/"
+          href='/src/SignIn.js'
         >
           Get started
         </Button>
