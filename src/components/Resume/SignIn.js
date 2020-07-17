@@ -5,11 +5,11 @@ import  {
 
 
 export class SignIn extends Component {
-    //Pagination
-    continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-    }  
+    // //Pagination
+    // continue = e => {
+    // e.preventDefault();
+    // this.props.nextStep();
+    // }  
 
     render() {
     //Passing values from ApplicantForm for Pagination

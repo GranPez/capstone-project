@@ -41,7 +41,7 @@ function ProductSmokingHero(props) {
       <Typography variant="subtitle1" className={classes.link}>
         Studyinc is here to help. Get in touch!
       </Typography>
-      <img src="https://img.icons8.com/ultraviolet/80/000000/lifebuoy.png" className={classes.buoy} alt="buoy" />
+      {/* <img src="https://img.icons8.com/ultraviolet/80/000000/lifebuoy.png" className={classes.buoy} alt="buoy" /> */}
     </Container>
   );
 }

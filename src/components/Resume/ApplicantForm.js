@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignIn from './SignIn';
+import SignIn, { Register } from './SignIn';
 import EducationList from './EducationList';
 import QualificationsList from './QualificationsList';
 import CoreCompetenciesList from './CoreCompetenciesList';

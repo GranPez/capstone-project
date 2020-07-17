@@ -3,6 +3,7 @@ import {Grid, Button} from 'semantic-ui-react';
 import Achievments from './Achievments';
 import AchievmentsForm from './AchievmentsForm';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 export class AchievmentsList extends Component {
 //Pagination
@@ -57,6 +58,7 @@ export class AchievmentsList extends Component {
     return(
     <Grid container columns={1}>
       <div>
+      <AppAppBar/>
         <AchievmentsForm newAchievment={this.addAchievment} />
         <ul>
           {achievments}

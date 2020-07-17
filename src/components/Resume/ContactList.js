@@ -3,6 +3,7 @@ import {Grid, Button} from 'semantic-ui-react';
 import Contact from './Contact';
 import ContactForm from './ContactForm';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 
 class ContactList extends Component {
@@ -61,6 +62,7 @@ class ContactList extends Component {
     return(
       <Grid container columns={1}>
         <div>
+        <AppAppBar/>
           <ContactForm newContact={this.addContact} />
           <ul>
             {contacts}

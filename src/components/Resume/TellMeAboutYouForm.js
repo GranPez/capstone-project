@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
+import AppAppBar from "../../modules/views/AppAppBar";
+
 class TellMeAboutYou extends Component {
     //Pagination
 continue = e => {
@@ -48,7 +50,7 @@ continue = e => {
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
-           
+           <AppAppBar/>
             <Header 
             style={
             {margin:"85px 0px 15px 0px"}

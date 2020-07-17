@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
+import App from "../../App";
+
 
 
 class Video extends Component {
@@ -36,6 +40,7 @@ class Video extends Component {
         return (
             <Form onSubmit={this.handleSubmit}>
             <div>
+              <AppAppBar/>
             <Header 
             style={
             {margin:"85px 0px 15px 0px"}
@@ -70,18 +75,25 @@ class Video extends Component {
                   </Segment>
                 </Grid.Column>
               </Grid.Row>        
+              <div> 
+                  <Link to = '/src/components/Resume/TellMeAboutYouForm.js'>   
+                    <Button
+                      label="Back"
+                      primary={false}
+                      style={styles.button}
+                    />  
+                  </Link>
+                </div>
+                    
+                <div>
+                  <Link to ="/src/components/Resume/Template.js"> 
                   <Button
-                    label="Back"
-                    primary={false}
-                    style={styles.button}
-                    onClick={this.back}
-                  />  
-                  <Button
-                    label="Next"
+                    label="Submit"
                     primary={true}
                     style={styles.button}
-                    onClick={this.continue}
                   />
+                  </Link>
+                </div>
             </Grid>     
           </Form>
        

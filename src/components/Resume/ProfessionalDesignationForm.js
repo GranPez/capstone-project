@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import  {Button, Form, Grid, Header, Segment} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import tempImage from'./Sample Sales Template.png';
+import AppAppBar from "../../modules/views/AppAppBar";
 
 const styles = {
     button:{
@@ -71,6 +72,7 @@ class ProfessionalDesignationForm extends Component {
         return (
           <Form onSubmit={this.handleSubmit}>
             <div>
+              <AppAppBar/>
             <Header 
             style={
             {margin:"85px 0px 15px 0px"}
@@ -86,9 +88,7 @@ class ProfessionalDesignationForm extends Component {
               box-shadow= "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
               alt="Template" /> 
               </div> 
-
-
-
+              
             Professional Designation (Optional)
             </Header>
 

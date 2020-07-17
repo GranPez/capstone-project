@@ -58,8 +58,8 @@ function ProductHeroLayout(props) {
         <img
           src="http://studyinc.org/wp-content/uploads/2018/11/StudyInc-Logo-200.png"
           alt="wonder"
-          width="128"
-          height="30"          
+          width="256"
+          height="60"          
         />
         <hr></hr>
         {children}

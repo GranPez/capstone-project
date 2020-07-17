@@ -3,6 +3,7 @@ import Reference from './Reference';
 import ReferenceForm from './ReferenceForm';
 import  {Grid, Button} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 class ReferenceList extends Component {
 
@@ -58,6 +59,7 @@ class ReferenceList extends Component {
     return(
       <Grid container columns={1}>
         <div>
+          <AppAppBar/>
           <ReferenceForm newReference={this.addReference}/>
           <ul>
             {references}

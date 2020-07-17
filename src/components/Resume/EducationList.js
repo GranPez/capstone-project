@@ -5,6 +5,7 @@ import  {Grid, Button} from 'semantic-ui-react';
 import Education from './Education';
 import EducationForm from './EducationForm';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 
 export class EducationList extends Component {
@@ -65,6 +66,7 @@ export class EducationList extends Component {
   
     <Grid container columns={1}>
       <div>
+      <AppAppBar/>
         <br />
         {/*<ResumeHeader />*/}
 

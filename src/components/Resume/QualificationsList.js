@@ -4,6 +4,7 @@ import  {Grid, Button} from 'semantic-ui-react';
 import Qualification from './Qualification';
 import QualificationsForm from './QualificationsForm';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 
 class QualificationsList extends Component {
@@ -61,6 +62,7 @@ class QualificationsList extends Component {
   
     <Grid container columns={1}>
       <div>
+        <AppAppBar/>
         <br />
         <QualificationsForm newQualification={this.addQualification} />
         <ul>

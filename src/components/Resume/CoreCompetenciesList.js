@@ -4,6 +4,7 @@ import  {Grid, Button} from 'semantic-ui-react';
 import CoreCompetency from './CoreCompetency';
 import CoreCompetenciesForm from './CoreCompetenciesForm';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 
 class CoreCompetenciesList extends Component {
@@ -45,6 +46,7 @@ class CoreCompetenciesList extends Component {
     //Values for Competencies
     const competencies = this.state.competencies.map(competency =>{
       return (
+     
       <CoreCompetency
       keyC={competency.id} 
       idC={competency.id} 
@@ -66,6 +68,7 @@ class CoreCompetenciesList extends Component {
   
     <Grid container columns={1}>
       <div>
+      <AppAppBar/>
 
         <CoreCompetenciesForm newCompetency={this.addCompetency} />
         <ul>

@@ -3,6 +3,7 @@ import {Grid, Button} from 'semantic-ui-react';
 import WorkExperience from './WorkExperience';
 import WorkExperienceForm from './WorkExperienceForm';
 import {Link} from 'react-router-dom';
+import AppAppBar from '../../modules/views/AppAppBar';
 
 class WorkExperienceList extends Component {
     //Pagination
@@ -55,6 +56,7 @@ class WorkExperienceList extends Component {
            return(
               <Grid container columns={1}>
               <div>
+                <AppAppBar/>
                 <WorkExperienceForm newWorkExp={this.addWorkExperience} />
                 <ul>
                   {jobs}

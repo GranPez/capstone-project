@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
+import {Link} from 'react-router-dom';
 
 const backgroundImage =
     'https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80';
@@ -41,16 +42,19 @@ function ProductHero(props) {
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         Please register. This will help businesses and human resource managers on our platform find your resume.
       </Typography>
+      <div>
+      <Link to='/src/components/Resume/ProfessionalDesignationForm.js'>
       <Button
         color="secondary"
         variant="contained"
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/studyinc/sign-up/"
       >
         Register
       </Button>
+      </Link>
+      </div>
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the experience and take the hassle out of resume writing
       </Typography>

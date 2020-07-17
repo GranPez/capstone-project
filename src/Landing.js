@@ -17,7 +17,7 @@ import AppAppBar from './modules/views/AppAppBar';
 function Index() {
   return (
     <React.Fragment>
-      <AppAppBar />
+      {/* <AppAppBar /> */}
       {/* <Navi/>
       <NaviLink/> */}
       <ProductHero />
