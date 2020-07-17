@@ -130,7 +130,7 @@ function AppAppBar(props) {
             className={classes.left}
             href="/src/components/Resume/AchievmentsList.js"
           >
-            {'Achievments'}
+            {'Achievements'}
           </Link>
 
           <div className={classes.left} />        

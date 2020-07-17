@@ -60,7 +60,7 @@ class Video extends Component {
             {margin:"15px 0px 15px 115px"}
             }  
             >
-            If you want to show us a video of yourself, upload it here:
+            If you want to show us a video of yourself, upload it here (max 1 minute):
             </p>  
             </div>
             <Grid columns={1} container stackable>
@@ -71,7 +71,7 @@ class Video extends Component {
                       label="Video file"
                       type="file"
                       id="video"
-                      placeholder='P.Eng., M.D., etc.' 
+                      placeholder='' 
                       value={this.state.video}
                       onChange={this.handleChange}
                     />
