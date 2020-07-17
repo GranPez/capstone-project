@@ -9,17 +9,13 @@ import ProductHero from './modules/views/ProductHero';
 import ProductValues from './modules/views/ProductValues';
 import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import ProductCTA from './modules/views/ProductCTA';
-import AppAppBar from './modules/views/AppAppBar';
-// import Navi from './modules/views/Navi';
-// import NaviLink from './modules/views/NaviLink';
+
 
 
 function Index() {
   return (
     <React.Fragment>
       {/* <AppAppBar /> */}
-      {/* <Navi/>
-      <NaviLink/> */}
       <ProductHero />
       <ProductValues />
       <ProductCategories />
