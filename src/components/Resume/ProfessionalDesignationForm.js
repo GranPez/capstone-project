@@ -38,19 +38,21 @@ class ProfessionalDesignationForm extends Component {
     //Professional Designation Form
     constructor(props){
         super(props);
-        this.state = { designation: "", App_Positon: ""};
+        this.state = { 
+          designation: "", 
+          app_position: ""};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(evt) {
-        this.setState ({ designation: evt.target.value});
+      this.setState({[evt.target.name]:evt.target.value});
     }
     handleSubmit(evt) {
         //alert(`You typed: ${this.state.designation}`);
-        this.setState({ designation : ""});
         evt.preventDefault();
-
+        this.setState({ designation : "", app_position : ""});
+       
         localStorage.setItem('designation',JSON.stringify(this.state));
     }
     componentDidMount() {
@@ -59,11 +61,13 @@ class ProfessionalDesignationForm extends Component {
       if (localStorage.getItem('designation')) {
           this.setState({
             designation: this.DesignationInfo.designation,
+            app_position: this.DesignationInfo.app_position
            
       })
   } else {
       this.setState({
-        designation:''
+        designation:'',
+        app_position:''
       })
     }
   }
@@ -101,9 +105,9 @@ class ProfessionalDesignationForm extends Component {
                     <Form.Input fluid
                       label="What position are you applying for?"
                       type='text'
-                      name='App_Position'
+                      name='app_position'
                       placeholder='Sales Representative, Project Manager, Web Development, etc.' 
-                      value={this.state.designation}
+                      value={this.state.app_position}
                       onChange={this.handleChange}
                     />
                   </Segment>

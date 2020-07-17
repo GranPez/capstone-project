@@ -41,7 +41,7 @@ class Template extends Component {
                                     > 
                                     {con.app_name} <span style={{ 
                                     color:"#984806",
-                                    }}>{con.app_lastname} </span>
+                                    }}>{con.app_lastname}, </span> {desig.designation}
                                     
                                 </div>
                             </Grid.Column>
@@ -56,7 +56,7 @@ class Template extends Component {
                                         fontSize:"1.1rem"}
                                         }               
                                         >
-                                            {desig.designation}
+                                            {desig.app_position}
                                     </div>
                             </Grid.Column>
                         </Grid.Row>                    
