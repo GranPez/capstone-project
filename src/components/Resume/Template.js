@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Box from './box'
-import  {Grid, Segment} from 'semantic-ui-react';
+import  {Button, Grid} from 'semantic-ui-react';
 
 
 class Template extends Component {
@@ -14,8 +13,8 @@ class Template extends Component {
         let achiev = JSON.parse(localStorage.achievements);
         let comp = JSON.parse(localStorage.competency);
         let prof = JSON.parse(localStorage.workExp);
-        // let qual = JSON.parse(localStorage.qualification);
-        // let qual = JSON.parse(localStorage.qualification);
+        let educ = JSON.parse(localStorage.education);
+        let refer = JSON.parse(localStorage.reference);
 
         
         return (
@@ -37,10 +36,12 @@ class Template extends Component {
                                 <div className="ui center aligned segment text" style={{ 
                                     height:'74px', 
                                     backgroundColor:"#f2f2f2",
-                                    fontSize:"1.25rem"}
+                                    fontSize:"1.75rem"}
                                     }                        
                                     > 
-                                    {con.app_name} {con.app_lastname}
+                                    {con.app_name} <span style={{ 
+                                    color:"#984806",
+                                    }}>{con.app_lastname} </span>
                                     
                                 </div>
                             </Grid.Column>
@@ -52,7 +53,7 @@ class Template extends Component {
                                         // width:'230px', 
                                         height:'60px', 
                                         backgroundColor:"#f2f2f2",
-                                        fontSize:".8rem"}
+                                        fontSize:".6rem"}
                                         }               
                                         >
                                             {desig.designation}
@@ -65,17 +66,19 @@ class Template extends Component {
                         <Grid.Row>
                                     <Grid.Column>
                                         <div className="ui left aligned segment  text" style={{width:'417px', 
-                                            height:'90px', 
+                                            height:'120px', 
                                             backgroundColor:"#f2f2f2",
                                             fontSize:".6rem"}
                                             }                        
-                                            > <h3>Summary of Qualifications</h3> 
+                                            > <h3><span style={{ 
+                                                color:"#984806",
+                                                }}> Summary </span> of Qualifications</h3> 
                                             {qual.qualification}
                                         </div>
                                         <div className="ui left aligned segment  text" style={{width:'417px', 
                                             height:'194px', 
                                             backgroundColor:"#f2f2f2",
-                                            fontSize:".5rem"}
+                                            fontSize:".6rem"}
                                             }                        
                                             > <h3>Achievements</h3>
                                             {achiev.achievments1} 
@@ -87,12 +90,14 @@ class Template extends Component {
                                         <p className="ui left aligned segment text" 
                                             style={{
                                             
-                                            width:'160px', 
-                                            height:'258px', 
+                                            width:'200px', 
+                                            height:'280px', 
                                             backgroundColor:"#f2f2f2",
-                                            fontSize:".5rem"}
+                                            fontSize:".6rem"}
                                             }               
-                                            ><h3>Core Competencies</h3> 
+                                            ><h3> <span style={{ 
+                                                color:"#984806",
+                                                }}>Core </span> Competencies</h3> 
                                             {comp.competency}
                                         </p>
                                     </Grid.Column>                    
@@ -101,9 +106,9 @@ class Template extends Component {
                                 <Grid.Row>
                                     <Grid.Column width="{8}">
                                         <div className="ui left aligned segment  text" style={{width:'417px', 
-                                            height:'500px', 
+                                            height:'400px', 
                                             backgroundColor:"#f2f2f2",
-                                            fontSize:".55rem"}
+                                            fontSize:".65rem"}
                                             }                        
                                             > <h3>Professional Experience</h3>
                                             {prof.jobtitle} *   {prof.company}  *   {prof.city}, {prof.province_state}  *   {prof.enddate} <br></br>
@@ -116,37 +121,52 @@ class Template extends Component {
                                     <Grid.Column width="{1}"></Grid.Column>
 
                                     <Grid.Column width="{5}">
-                                        <p className="ui center aligned segment  text" style={{width:'160px', 
+                                        <p className="ui left aligned segment  text" style={{width:'200px', 
                                             height:'123px', 
                                             backgroundColor:"#f2f2f2",
-                                            fontSize:"1rem"}
+                                            fontSize:".6rem"}
                                             }               
-                                            >just some words
+                                            > <h3 style={{ 
+                                                color:"#984806",
+                                                }}>Education</h3>
+                                            * {educ.degree} <br></br> {educ.schoolName} <br></br>  {educ.graduationYear}
                                         </p>
-                                        <p className="ui center aligned segment  text" style={{width:'160px', 
+                                        <p className="ui left aligned segment  text" style={{width:'200px', 
                                             height:'123px', 
                                             backgroundColor:"#f2f2f2",
-                                            fontSize:"1rem"}
+                                            fontSize:".6rem"}
                                             }               
-                                            >just some words
+                                            > <h3>References</h3>
+                                            {refer.contact_name}  {refer.contact_lastname} <br></br> {educ.schoolName}
                                         </p>
-                                        <p className="ui right aligned segment  text" style={{width:'160px', 
+                                        <p className="ui left aligned segment  text" style={{width:'200px', 
                                             height:'211px', 
                                             backgroundColor:"#f2f2f2",
-                                            fontSize:"1rem"}
+                                            fontSize:".6rem"}
                                             }               
-                                            >just some words
-                                        </p>                     
-
-
+                                            ><h3 style={{ 
+                                                color:"#984806",
+                                                }}>Phone</h3> {con.contact_phone}
+                                            <h3>Email</h3> {con.app_email}
+                                            <h3 style={{ 
+                                                color:"#984806",
+                                                }}>Address</h3> {con.app_address}
+                                        </p>
                                     </Grid.Column>
-
-
                                 </Grid.Row>
 
-            </Grid>
+                    </Grid>
      
                    
+                    </div>
+                    <div>
+                        <br></br>
+                    <Button className="ui center align" onClick={() => window.print()}
+                    label="Print"
+                    primary={true}
+                
+                    />
+                
                 </div>
             </div>
         );
