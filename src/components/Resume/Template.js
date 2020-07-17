@@ -53,7 +53,7 @@ class Template extends Component {
                                         // width:'230px', 
                                         height:'60px', 
                                         backgroundColor:"#f2f2f2",
-                                        fontSize:".6rem"}
+                                        fontSize:"1.1rem"}
                                         }               
                                         >
                                             {desig.designation}
