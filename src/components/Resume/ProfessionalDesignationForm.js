@@ -84,7 +84,7 @@ class ProfessionalDesignationForm extends Component {
             as= 'h1' 
             color='blue'
             textAlign='center'
-            >
+            > Template <br></br> <br></br>
               <div>
               <img src={tempImage}
               width="50%"
