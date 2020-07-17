@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Landing from './Landing';
-//import SignIn from './SignIn';
-//import SignUp from './SignUp';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 //import ForgotPassword from './ForgotPasword';
 // import Index from './components/Resume/Index';
 import { Route, Switch} from 'react-router-dom';
@@ -17,7 +17,7 @@ import AchievmentsList from './components/Resume/AchievmentsList';
 import WorkExperienceList from './components/Resume/WorkExperienceList';
 import TellMeAboutYou from './components/Resume/TellMeAboutYouForm';
 import Video from './components/Resume/Video';
-import SignIn from './components/Resume/SignIn';
+// import SignIn from './components/Resume/SignIn';
 
 
 function App() {
@@ -37,6 +37,8 @@ function App() {
         <Route exact path="/src/components/Resume/ProfessionalDesignationForm.js" component={ProfessionalDesignationForm}/>
         <Route exact path="/src/components/Resume/TellMeAboutYouForm.js" component={TellMeAboutYou}/>
         <Route exact path="/src/components/Resume/Video.js" component={Video}/>
+        <Route exact path="/src/SignIn.js" component={SignIn}/>
+        <Route exact path="/src/SignUp.js.js" component={SignUp}/>
         
       </Switch>
 
