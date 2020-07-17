@@ -48,16 +48,27 @@ function AppAppBar(props) {
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
 
-          <div>
+        <div className={classes.logo} />   
+            <Link to="/src/Landing.js">
               <img src={StudyInc_White}
               width="50%"
               height="50%"
               className={classes.logo}
-              alt="logo" /> 
-              </div> 
-        
-        <div className={classes.left} />         
-        <Link
+              alt="logo" />
+            </Link>
+          
+            <div className={classes.left} />         
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.left}
+            href="/"
+          >
+            {'StudyInc'}
+          </Link>
+          <div className={classes.left} />         
+          <Link
             variant="h6"
             underline="none"
             color="inherit"
