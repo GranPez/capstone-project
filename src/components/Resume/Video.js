@@ -36,7 +36,7 @@ class Video extends Component {
         evt.preventDefault();
     }
 
-    loadTemplate ()
+
 
 
     render() {
