@@ -1,5 +1,5 @@
-# StudyInc_Project
- WeLearn Web Dev Project for StudyInc
+# Capstone project (EDGEUP YYC)
+ Web Dev Project 
  Additional modules that have been installed:
  - npm install @material-ui/core
  - npm install @material-ui/icons
