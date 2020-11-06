@@ -55,12 +55,7 @@ function ProductHeroLayout(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="http://studyinc.org/wp-content/uploads/2018/11/StudyInc-Logo-200.png"
-          alt="wonder"
-          width="256"
-          height="60"          
-        />
+        
         <hr></hr>
         {children}
         <div className={classes.backdrop} />

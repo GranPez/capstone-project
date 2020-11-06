@@ -53,7 +53,7 @@ function AppBar(props) {
             className={classes.title}
             href="/src/"
           >
-            {'StudyInc'}
+            {'Home Page'}
           </Link>
           <div className={classes.right}>
             <Link
