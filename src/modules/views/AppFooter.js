@@ -88,10 +88,10 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://www.facebook.com/StudyIncOrg/" className={classes.icon}>
+                <a href="https://www.facebook.com/" className={classes.icon}>
                   <img src="https://image.flaticon.com/icons/svg/124/124010.svg" width="30" height="30" alt="Facebook" />
                 </a>
-                <a href="https://www.linkedin.com/company/studyinccorp/" className={classes.icon}>
+                <a href="https://www.linkedin.com/" className={classes.icon}>
                   <img src="https://image.flaticon.com/icons/svg/1384/1384062.svg" width="30" height="30" alt="LinkIn" />
                 </a>
               </Grid>
