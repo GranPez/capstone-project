@@ -9,9 +9,9 @@ import TextField from '../components/TextField';
 function Copyright() {
   return (
     <React.Fragment>
-      {'© '}
+      {'Made with © '}
       <Link color="inherit" href="https://material-ui.com/">
-        StudyInc. Corp.
+        Material UI.
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
